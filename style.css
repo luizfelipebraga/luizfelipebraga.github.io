@@ -8,9 +8,13 @@ body, html {
     height: 100%;
 }
 
+h1, h2, h3, h4, h5, span, li {
+    font-family: 'Inter', sans-serif;
+}
+
 section {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
 }
 
 .paralax {
@@ -48,8 +52,8 @@ section {
 }
 
 .name-box>span:first-child {
-    font-size: 1.8rem;
-    color: #ff7c7c;
+    font-size: 1.5rem;
+    color: #ffa500;
 }
 
 .sub-name {
@@ -82,8 +86,99 @@ footer>a>img {
     width: 4rem;
 }
 
-#linkedinImg{
+#linkedinImg {
     margin: 0 auto;
     padding: 0;
     width: 7rem;
+}
+
+#projetos {
+    background: #242424;
+}
+
+#formacao {
+    background: #f2f2f2;
+}
+
+h1 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    display: flex;
+    margin: 0 auto;
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    color: #000;
+}
+
+.containerFormacao {
+    display: flex;
+    height: 89vh;
+}
+
+.container-EnsinoMedioSenai {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.8rem;
+}
+
+.ensino-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 27rem;
+
+    background: #fff;
+    box-shadow: 0 10px 12px rgba(255, 255, 255, 0.04);
+    border-radius: 1rem;
+    padding: 2rem 1.8rem;
+}
+
+.maincontent {
+    display: flex;
+    flex-direction: column;
+}
+
+.infos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.infos>span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    align-items: center;
+}
+
+.infos>img {
+    width: 10rem;
+    border-radius: .5rem;
+}
+
+.infos>#tobiasImg {
+    padding-top: 1rem;
+    width: 5rem;
+    height:6rem;
+    border-radius: .5rem;
+}
+
+div > li {
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+#liEscola {
+    margin-top: 1rem;
 }
