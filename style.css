@@ -239,7 +239,7 @@ div > li {
     position: absolute;
     transform: scaleX(0);
     transform-origin: left;
-    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    animation: animate 2s 2s cubic-bezier(1,0,0.5,1) forwards;
 }
 
 @keyframes animate {
