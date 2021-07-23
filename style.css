@@ -104,21 +104,26 @@ footer>a>img {
 h1 {
     padding-top: 2rem;
     padding-bottom: 2rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #000;
     display: flex;
     justify-content: center;
 }
 
 hr {
+    border: 1px solid rgb(214, 214, 214);
     display: flex;
     margin: 0 auto;
     width: 50%;
     margin-bottom: 3rem;
+
+    box-shadow: 5px 5px 10px rgba(235, 235, 235, 0.2);
 }
 
 h2 {
     color: #000;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 h4 {
