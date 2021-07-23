@@ -121,6 +121,10 @@ h2 {
     color: #000;
 }
 
+h4 {
+    margin-bottom: 1rem;
+}
+
 .containerFormacao {
     display: flex;
     height: 75vh;
@@ -184,12 +188,18 @@ div > li {
     margin-top: 1rem;
 }
 
+.container-skills {
+    display: flex;
+
+}
+
+
 .skills-bar {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     
-    width: 600px;
+    width: 31.25rem;
     background: #fff;
     border-radius: 10px;
     padding: 25px 30px;
@@ -254,6 +264,28 @@ div > li {
     width: 50%;
 }
 
+.bar .progress-line.colaboracao span {
+    width: 90%;
+}.bar .progress-line.comu span {
+    width: 85%;
+}.bar .progress-line.pressao span {
+    width: 85%;
+}.bar .progress-line.flexibilidade span {
+    width: 90%;
+}.bar .progress-line.autodidata span {
+    width: 85%;
+}
+
+.bar .progress-line.port span {
+    width: 100%;
+}.bar .progress-line.eng span {
+    width: 85%;
+}.bar .progress-line.esp span {
+    width: 30%;
+}.bar .progress-line.jap span {
+    width: 5%;
+}
+
 .bar .progress-line span::before {
     position: absolute;
     content: "";
@@ -301,6 +333,26 @@ div > li {
     content: "60%";
 }.bar .progress-line.springboot span::after {
     content: "60%";
+}
+
+.bar .progress-line.colaboracao span::after {
+    content: "90%";
+}.bar .progress-line.comu span::after {
+    content: "85%";
+}.bar .progress-line.pressao span::after {
+    content: "85%";
+}.bar .progress-line.flexibilidade span::after {
+    content: "90%";
+}.bar .progress-line.autodidata span::after {
+    content: "85%";
+}
+
+.bar .progress-line.port span::after {
+    content: "100%";
+}.bar .progress-line.eng span::after {
+    content: "85%";
+}.bar .progress-line.esp span::after {
+    content: "30%";
 }
 
 .info > span {
