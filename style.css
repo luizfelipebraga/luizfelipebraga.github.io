@@ -8,7 +8,7 @@ body, html {
     height: 100%;
 }
 
-h1, h2, h3, h4, h5, span, li {
+h1, h2, h3, h4, h5, span, li, p {
     font-family: 'Inter', sans-serif;
 }
 
@@ -93,7 +93,7 @@ footer>a>img {
 }
 
 #projetos {
-    background: #242424;
+    background: #101010;
 }
 
 #formacao {
@@ -116,7 +116,6 @@ hr {
     margin: 0 auto;
     width: 50%;
     margin-bottom: 3rem;
-
     box-shadow: 5px 5px 10px rgba(235, 235, 235, 0.2);
 }
 
@@ -146,9 +145,8 @@ h4 {
     display: flex;
     flex-direction: column;
     min-height: 27rem;
-
     background: #fff;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     padding: 2rem 1.8rem;
 }
@@ -173,18 +171,19 @@ h4 {
 }
 
 .infos>img {
-    width: 10rem;
+    font-size: 0;
+    height: 5.5rem;
+    width: 7rem;
     border-radius: .5rem;
 }
 
 .infos>#tobiasImg {
-    padding-top: 1rem;
-    width: 5rem;
-    height:6rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: .5rem;
 }
 
-div > li {
+div>li {
     font-weight: 500;
     margin-top: 1rem;
 }
@@ -195,19 +194,17 @@ div > li {
 
 .container-skills {
     display: flex;
-
 }
 
 .skills-bar {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    
     width: 31.25rem;
     background: #fff;
     border-radius: 10px;
     padding: 25px 30px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .skills-bar .bar {
@@ -218,7 +215,7 @@ div > li {
     margin-top: 0px;
 }
 
-.skills-bar .bar .info{
+.skills-bar .bar .info {
     margin-bottom: 5px;
 }
 
@@ -230,9 +227,8 @@ div > li {
     border-radius: 10px;
     transform: scaleX(0);
     transform-origin: left;
-    box-shadow: inset 0px 1px 1px rgba(0, 0.05, 0,0.05),
-                        0px 1px rgba(255, 255, 255,0.8);
-    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    box-shadow: inset 0px 1px 1px rgba(0, 0.05, 0, 0.05), 0px 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
 .skills-bar .bar .progress-line span {
@@ -243,7 +239,7 @@ div > li {
     position: absolute;
     transform: scaleX(0);
     transform-origin: left;
-    animation: animate 2s 2s cubic-bezier(1,0,0.5,1) forwards;
+    animation: animate 2s 2s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
 @keyframes animate {
@@ -254,39 +250,65 @@ div > li {
 
 .bar .progress-line.html span {
     width: 90%;
-}.bar .progress-line.css span {
+}
+
+.bar .progress-line.css span {
     width: 75%;
-}.bar .progress-line.js span {
+}
+
+.bar .progress-line.js span {
     width: 65%;
-}.bar .progress-line.csharp span {
+}
+
+.bar .progress-line.csharp span {
     width: 65%;
-}.bar .progress-line.react span {
+}
+
+.bar .progress-line.react span {
     width: 85%;
-}.bar .progress-line.java span {
+}
+
+.bar .progress-line.java span {
     width: 50%;
-}.bar .progress-line.springboot span {
+}
+
+.bar .progress-line.springboot span {
     width: 50%;
 }
 
 .bar .progress-line.colaboracao span {
     width: 90%;
-}.bar .progress-line.comu span {
+}
+
+.bar .progress-line.comu span {
     width: 85%;
-}.bar .progress-line.pressao span {
+}
+
+.bar .progress-line.pressao span {
     width: 85%;
-}.bar .progress-line.flexibilidade span {
+}
+
+.bar .progress-line.flexibilidade span {
     width: 90%;
-}.bar .progress-line.autodidata span {
+}
+
+.bar .progress-line.autodidata span {
     width: 85%;
 }
 
 .bar .progress-line.port span {
     width: 100%;
-}.bar .progress-line.eng span {
+}
+
+.bar .progress-line.eng span {
     width: 85%;
-}.bar .progress-line.esp span {
+}
+
+.bar .progress-line.esp span {
     width: 30%;
-}.bar .progress-line.jap span {
+}
+
+.bar .progress-line.jap span {
     width: 5%;
 }
 
@@ -295,8 +317,8 @@ div > li {
     content: "";
     right: 0;
     top: -10px;
-    height:0;
-    width:0;
+    height: 0;
+    width: 0;
     border: .5rem solid transparent;
     border-bottom-width: 0px;
     border-right-width: 0px;
@@ -311,64 +333,182 @@ div > li {
     font-size: 12px;
     font-weight: 500;
     padding: 1px 8px;
-    background:#000;
+    background: #000;
     border-radius: 3px;
     opacity: 0;
     animation: showText2 0.5s 1.5s linear forwards;
 }
 
 @keyframes showText2 {
-    100%{
+    100% {
         opacity: 1;
     }
 }
 
 .bar .progress-line.html span::after {
     content: "90%";
-}.bar .progress-line.css span::after {
+}
+
+.bar .progress-line.css span::after {
     content: "75%";
-}.bar .progress-line.js span::after {
+}
+
+.bar .progress-line.js span::after {
     content: "65%";
-}.bar .progress-line.csharp span::after {
+}
+
+.bar .progress-line.csharp span::after {
     content: "65%";
-}.bar .progress-line.react span::after {
+}
+
+.bar .progress-line.react span::after {
     content: "85%";
-}.bar .progress-line.java span::after {
+}
+
+.bar .progress-line.java span::after {
     content: "60%";
-}.bar .progress-line.springboot span::after {
+}
+
+.bar .progress-line.springboot span::after {
     content: "60%";
 }
 
 .bar .progress-line.colaboracao span::after {
     content: "90%";
-}.bar .progress-line.comu span::after {
+}
+
+.bar .progress-line.comu span::after {
     content: "85%";
-}.bar .progress-line.pressao span::after {
+}
+
+.bar .progress-line.pressao span::after {
     content: "85%";
-}.bar .progress-line.flexibilidade span::after {
+}
+
+.bar .progress-line.flexibilidade span::after {
     content: "90%";
-}.bar .progress-line.autodidata span::after {
+}
+
+.bar .progress-line.autodidata span::after {
     content: "85%";
 }
 
 .bar .progress-line.port span::after {
     content: "100%";
-}.bar .progress-line.eng span::after {
+}
+
+.bar .progress-line.eng span::after {
     content: "85%";
-}.bar .progress-line.esp span::after {
+}
+
+.bar .progress-line.esp span::after {
     content: "30%";
 }
 
-.info > span {
+.info>span {
     font-size: 1rem;
     font-weight: 500;
-
     opacity: 0;
     animation: showText 0.5s 1.5s linear forwards;
 }
 
 @keyframes showText {
-    100%{
+    100% {
         opacity: 1;
     }
+}
+
+.timeline-section > h1 {
+    color: #fff;
+}
+
+.timeline-section{
+	background-color: #101010;
+	min-height: 100vh;
+	padding: 2rem 1rem;
+}
+.timeline-items{
+	max-width: 1000px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.timeline-items::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: #fff;
+	left: calc(50% - 1px);
+}
+.timeline-item{
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
+}
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+	text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+	height: 16px;
+	width: 16px;
+	background-color: #eaa023;
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top:10px;
+}
+.timeline-date > span{
+	font-size: 18px;
+	color: #eaa023;
+}
+.timeline-content{
+    background-color: #292929;
+	padding: 30px;
+	border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.timeline-content h3{
+    font-size: 20px;
+	color: #ffffff;
+	margin:0 0 10px;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+.timeline-content p{
+    color: #c8c8c8;
+	font-size: .9rem;
+	font-weight: 300;
+	line-height: 22px;
+    text-align: left;
+}
+
+/* responsive */
+@media(max-width: 767px){
+	.timeline-items::before{
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+	.timeline-dot{
+		left:0;
+	}
 }
