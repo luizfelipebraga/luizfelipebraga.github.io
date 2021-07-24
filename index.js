@@ -19,7 +19,9 @@ function hideProgress() {
 }
 
 window.addEventListener('scroll', () => {
+    skillSection.getBoundingClientRect() === null ? null : skillSection.getBoundingClientRect()
     const sectionPos = skillSection.getBoundingClientRect().top;
+    sectionPos !== null? sectionPos : null;
     const screenPos = window.innerHeight;
 
     if(sectionPos < screenPos) {
