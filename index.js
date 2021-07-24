@@ -1,6 +1,6 @@
 const skillSection = document.getElementById('skills');
 
-const progressBar = document.querySelectorAll('.progress-line')
+const progressBar = document.querySelectorAll('progress-line')
 
 
 function showProgress() {
