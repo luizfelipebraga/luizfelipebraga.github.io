@@ -17,7 +17,6 @@ section {
     height: 100vh;
 }
 
-
 .container {
     display: flex;
     flex-direction: column;
@@ -57,11 +56,10 @@ section {
     letter-spacing: .5rem;
 }
 
-.name{
-      
+.name {
     width: 24em;
     margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
+    border-right: 2px solid rgba(255, 255, 255, .75);
     font-size: 180%;
     text-align: center;
     white-space: nowrap;
@@ -69,17 +67,27 @@ section {
 }
 
 /* Animation */
-.anim-typewriter{
-  animation: typewriter 2s steps(44) 1s 1 normal both,
-             blinkTextCursor 700ms steps(44) infinite normal;
+
+.anim-typewriter {
+    animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 700ms steps(44) infinite normal;
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 10em;}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 10em;
+    }
 }
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+    to {
+        border-right-color: transparent;
+    }
 }
 
 .name-box>span:first-child {
@@ -162,7 +170,6 @@ h4 {
     margin-bottom: 1rem;
 }
 
-
 .containerFormacao {
     display: flex;
     height: 75vh;
@@ -179,16 +186,20 @@ h4 {
 .ensino-content {
     display: flex;
     flex-direction: column;
-    min-height: 27rem;
+    min-height: 24rem;
     background: #fff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
-    padding: 2rem 1.8rem;
+    padding: 1.3rem 1.8rem;
 }
 
 .maincontent {
     display: flex;
     flex-direction: column;
+}
+
+.maincontent li {
+    font-size: .9rem;
 }
 
 .infos {
@@ -453,63 +464,70 @@ div>li {
     }
 }
 
-.timeline-section > h1 {
+.timeline-section>h1 {
     color: #fff;
 }
 
-.timeline-section{
-	background-color: #101010;
-	min-height: 100vh;
-	padding: 2rem 1rem;
+.timeline-section {
+    background-color: #101010;
+    min-height: 100vh;
 }
-.timeline-items{
-	max-width: 1000px;
-	margin:auto;
-	display: flex;
-	flex-wrap: wrap;
-	position: relative;
+
+.timeline-items {
+    max-width: 62.5rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
 }
-.timeline-items::before{
-	content: '';
-	position: absolute;
-	width: 2px;
-	height: 100%;
-	background-color: #fff;
-	left: calc(50% - 1px);
+
+.timeline-items::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+    left: calc(50% - 1px);
 }
-.timeline-item{
-	margin-bottom: 40px;
-	width: 100%;
-	position: relative;
+
+.timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
 }
-.timeline-item:last-child{
-	margin-bottom: 0;
+
+.timeline-item:last-child {
+    margin-bottom: 0;
 }
-.timeline-item:nth-child(odd){
+
+.timeline-item:nth-child(odd) {
     padding-right: calc(50% + 30px);
-	text-align: right;
+    text-align: right;
 }
-.timeline-item:nth-child(even){
+
+.timeline-item:nth-child(even) {
     padding-left: calc(50% + 30px);
 }
-.timeline-dot{
-	height: 16px;
-	width: 16px;
-	background-color: #eaa023;
-	position: absolute;
-	left: calc(50% - 8px);
-	border-radius: 50%;
-	top:10px;
-}
-.timeline-date > span{
-	font-size: 18px;
-	color: #eaa023;
-}
-.timeline-content{
-    background-color: #292929;
-	padding: 30px;
-	border-radius: 5px;
 
+.timeline-dot {
+    height: 16px;
+    width: 16px;
+    background-color: #eaa023;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-date>span {
+    font-size: 18px;
+    color: #eaa023;
+}
+
+.timeline-content {
+    background-color: #292929;
+    padding: 30px;
+    border-radius: 5px;
     transition: filter 0.2s;
 }
 
@@ -522,20 +540,21 @@ a {
     text-decoration: none;
 }
 
-.timeline-content h3{
+.timeline-content h3 {
     display: flex;
     justify-content: center;
     font-size: 20px;
-	color: #ffffff;
-	margin:0 0 15px;
-	text-transform: capitalize;
-	font-weight: 500;
+    color: #ffffff;
+    margin: 0 0 15px;
+    text-transform: capitalize;
+    font-weight: 500;
 }
-.timeline-content p{
+
+.timeline-content p {
     color: #c8c8c8;
-	font-size: .9rem;
-	font-weight: 300;
-	line-height: 22px;
+    font-size: .9rem;
+    font-weight: 300;
+    line-height: 22px;
     text-align: left;
 }
 
@@ -560,7 +579,6 @@ a {
 .containerInfos span {
     color: #757575;
     font-size: .9rem;
-
     padding: 0rem 1rem;
 }
 
@@ -575,7 +593,7 @@ a {
     text-align: left;
 }
 
-.containerInfos > .infosAboutMe li {
+.containerInfos>.infosAboutMe li {
     padding-top: .5rem;
 }
 
@@ -584,20 +602,90 @@ a {
     align-items: center;
     margin-top: 1rem;
 }
+
 /* responsive */
-@media(max-width: 767px){
-	.timeline-items::before{
-		left: 7px;
-	}
-	.timeline-item:nth-child(odd){
-		padding-right: 0;
-		text-align: left;
-	}
-	.timeline-item:nth-child(odd),
-	.timeline-item:nth-child(even){
-		padding-left: 37px;
-	}
-	.timeline-dot{
-		left:0;
-	}
+
+@media (max-width: 1920px) {
+    #skills {
+        height: 80vh;
+    }
+    .skills-bar {
+        width: 31.5rem;
+    }
+}
+
+@media (max-width: 1800px) {
+    #skills {
+        height: 80vh;
+    }
+    html {
+        font-size: 92.75%;
+    }
+    .ensino-content {
+        padding: .5rem 1.8rem;
+    }
+}
+
+@media (max-width: 1600px) {
+    #skills {
+        height: 100vh;
+    }
+    html {
+        font-size: 92.75%;
+    }
+
+    .skills-bar {
+        width: 28rem;
+    }
+    .ensino-content {
+        min-height: 24rem;
+        padding: .5rem 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 80.75%;
+    }
+
+    .ensino-content {
+        min-height: 28rem;
+    }
+
+    #skills {
+        height: 90vh;
+    }
+    .skills-bar {
+        width: 17rem;
+    }
+    .timeline-items::before {
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd) {
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd), .timeline-item:nth-child(even) {
+        padding-left: 37px;
+    }
+    .timeline-dot {
+        left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .maincontent li {
+        text-align: left;
+    }
+
+    .ensino-content {
+        min-height: 30rem;
+    }
+    html {
+        font-size: 76.75%;
+    }
+    .ensino-content {
+        padding: .2rem 1.8rem;
+    }
 }
