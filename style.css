@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5, span, li, p {
     font-family: 'Inter', sans-serif;
 }
 
-section {
+section:first-child {
     width: 100%;
     height: 100vh;
 }
@@ -41,6 +41,24 @@ section {
     position: absolute;
     width: 100%;
     top: 30%;
+}
+
+.subtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    padding: 2rem 0;
+}
+
+.subtitle hr {
+    margin-top: 1rem;
+}
+
+.timeline-section .subtitle h1 {
+    color: #fff;
 }
 
 .name-box {
@@ -134,18 +152,20 @@ span {
 }
 
 #formacao {
-    background: #f2f2f2;
-    height: 65vh;
+    background: #f9f9f9;
+    height: 100%;
 }
 
 #skills {
-    padding-top: 2rem;
-    height: 85vh;
+    height: 100%;
+}
+
+#myself {
+    height: 100%;
+    background: #f2f2f2;
 }
 
 h1 {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
     font-size: 1.4rem;
     color: #000;
     display: flex;
@@ -157,7 +177,6 @@ hr {
     display: flex;
     margin: 0 auto;
     width: 30%;
-    margin-bottom: 3rem;
     box-shadow: 5px 5px 10px rgba(235, 235, 235, 0.2);
 }
 
@@ -173,7 +192,7 @@ h4 {
 
 .containerFormacao {
     display: flex;
-    height: 75vh;
+    height: 48vh;
 }
 
 .container-EnsinoMedioSenai {
@@ -471,7 +490,7 @@ div>li {
 
 .timeline-section {
     background-color: #101010;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 .timeline-items {
@@ -559,22 +578,13 @@ a {
     text-align: left;
 }
 
-#myself {
-    height: 32vh;
-    background: #f2f2f2;
-}
-
-#myself hr {
-    margin: 0 auto;
-    padding: 0;
-}
-
 .containerInfos {
-    padding-top: 1rem;
     display: flex;
     justify-content: center;
     text-align: center;
     gap: 5rem;
+
+    padding-bottom: 1.3rem;
 }
 
 .containerInfos span {
@@ -617,7 +627,7 @@ a {
 
 @media (max-width: 1800px) {
     #skills {
-        height: 90vh;
+        height: 100vh;
     }
     html {
         font-size: 92.75%;
@@ -632,15 +642,28 @@ a {
         height: 100vh;
     }
     html {
-        font-size: 92.75%;
+        font-size: 90.75%;
+    }
+
+    .timeline-section {
+        min-height: 100vh;
+    }
+
+    .skills-bar .bar {
+        margin: 15px 0;
+    }
+
+    .container-skills {
+        display: flex;
+        height: 80%;
     }
 
     .skills-bar {
         width: 28rem;
     }
     .ensino-content {
-        min-height: 24rem;
-        padding: .5rem 1.8rem;
+        min-height: 25rem;
+        padding: .3rem 1.8rem;
     }
 }
 
@@ -653,9 +676,6 @@ a {
         min-height: 28rem;
     }
 
-    #skills {
-        height: 90vh;
-    }
     .skills-bar {
         width: 17rem;
     }
