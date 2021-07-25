@@ -618,7 +618,7 @@ a {
 
 @media (max-width: 1920px) {
     #skills {
-        height: 90vh;
+        height: 100vh;
     }
     .skills-bar {
         width: 31.5rem;
