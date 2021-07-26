@@ -641,6 +641,11 @@ a {
     #skills {
         height: 100vh;
     }
+
+    #formacao{
+        height: 70vh;
+    }
+
     html {
         font-size: 90.75%;
     }
@@ -670,6 +675,10 @@ a {
 @media (max-width: 768px) {
     html {
         font-size: 80.75%;
+    }
+
+    #formacao{
+        height: 65vh;
     }
 
     .ensino-content {
