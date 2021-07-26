@@ -207,15 +207,12 @@ h4 {
     border-radius: 1rem;
 }
 
-/* .ensino-content {
-    display: flex;
-    flex-direction: column;
-    min-height: 24rem;
-    background: #fff;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 1rem;
-    padding: 1.3rem 1.8rem;
-} */
+.container-EnsinoMedioSenai h3 {
+    width:100%;
+    padding: 1rem 1rem;
+    border-radius: .9rem;
+    background: rgb(250, 250, 250)
+}
 
 .maincontent {
     display: flex;
@@ -228,32 +225,22 @@ h4 {
 
 .infos {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     margin-top: 2rem;
 }
 
-.infos>span {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #000;
-    align-items: center;
-}
-
 .infos>img {
     font-size: 0;
     width: 8rem;
-    border-radius: .5rem;
+    border-radius: 5%;
     object-fit: cover;
 }
 
 div>li {
     font-weight: 500;
-    margin-top: 1rem;
-}
-
-#liEscola {
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .container-skills {
