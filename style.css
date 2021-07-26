@@ -267,7 +267,7 @@ div>li {
 }
 
 .container-skills .skills-bar {
-    flex: 5;
+    flex: 1 1 400px;
 
     display: flex;
     flex-direction: column;
