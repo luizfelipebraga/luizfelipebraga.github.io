@@ -139,12 +139,7 @@ span {
 
 #introduction footer>a>img {
     margin-left: 10px;
-    width: 4rem;
-}
-
-#introduction #linkedinImg {
-    margin-left: 10px;
-    width: 4rem;
+    width: 3rem;
 }
 
 #projetos {
@@ -192,18 +187,27 @@ h4 {
 
 .containerFormacao {
     display: flex;
-    height: 53vh;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-bottom: 1.5rem;
 }
 
-.container-EnsinoMedioSenai {
+.containerFormacao .container-EnsinoMedioSenai {
     flex: 6;
-    height: 1rem;
-    display: flex;
     flex-direction: column;
-    padding: 0 1.8rem;
+
+    padding: 1rem 1rem;
+
+    min-height: 300px;
+
+    background: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
 }
 
-.ensino-content {
+/* .ensino-content {
     display: flex;
     flex-direction: column;
     min-height: 24rem;
@@ -211,7 +215,7 @@ h4 {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     padding: 1.3rem 1.8rem;
-}
+} */
 
 .maincontent {
     display: flex;
@@ -238,15 +242,9 @@ h4 {
 
 .infos>img {
     font-size: 0;
-    height: 5.5rem;
-    width: 7rem;
+    width: 8rem;
     border-radius: .5rem;
-}
-
-.infos>#tobiasImg {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: .5rem;
+    object-fit: cover;
 }
 
 div>li {
@@ -260,16 +258,24 @@ div>li {
 
 .container-skills {
     display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1368px;
+    padding-bottom: 1.5rem;
 }
 
-.skills-bar {
+.container-skills .skills-bar {
+    flex: 5;
+
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    
     width: 31.25rem;
     background: #fff;
     border-radius: 10px;
-    padding: 25px 30px;
+    padding: 1rem 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -617,34 +623,18 @@ a {
 /* responsive */
 
 @media (max-width: 1920px) {
-    #skills {
-        height: 100vh;
-    }
     .skills-bar {
         width: 31.5rem;
     }
 }
 
 @media (max-width: 1800px) {
-    #skills {
-        height: 100vh;
-    }
     html {
         font-size: 92.75%;
-    }
-    .ensino-content {
-        padding: .5rem 1.8rem;
     }
 }
 
 @media (max-width: 1600px) {
-    #skills {
-        height: 100vh;
-    }
-
-    #formacao{
-        height: 70vh;
-    }
 
     html {
         font-size: 90.75%;
@@ -658,17 +648,8 @@ a {
         margin: 15px 0;
     }
 
-    .container-skills {
-        display: flex;
-        height: 80%;
-    }
-
     .skills-bar {
         width: 28rem;
-    }
-    .ensino-content {
-        min-height: 25rem;
-        padding: .3rem 1.8rem;
     }
 }
 
@@ -676,15 +657,6 @@ a {
     html {
         font-size: 80.75%;
     }
-
-    #formacao{
-        height: 65vh;
-    }
-
-    .ensino-content {
-        min-height: 28rem;
-    }
-
     .skills-bar {
         width: 17rem;
     }
@@ -704,18 +676,7 @@ a {
 }
 
 @media (max-width: 500px) {
-
-    .maincontent li {
-        text-align: left;
-    }
-
-    .ensino-content {
-        min-height: 30rem;
-    }
     html {
         font-size: 76.75%;
-    }
-    .ensino-content {
-        padding: .2rem 1.8rem;
     }
 }
