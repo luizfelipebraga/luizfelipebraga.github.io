@@ -223,6 +223,16 @@ h4 {
     font-size: .9rem;
 }
 
+.maincontent div>li {
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+div>li {
+    font-weight: 500;
+    margin-top: 1.2rem;
+}
+
 .infos {
     display: flex;
     justify-content: center;
@@ -236,11 +246,6 @@ h4 {
     width: 8rem;
     border-radius: 5%;
     object-fit: cover;
-}
-
-div>li {
-    font-weight: 500;
-    margin-top: 2rem;
 }
 
 .container-skills {
