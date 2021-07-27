@@ -1,32 +1,34 @@
-// const skillSection = document.getElementById('skills');
+const skillSection = document.getElementById('skills');
 
-// const progressBar = document.querySelectorAll('progress-line')
+const progressBar = document.querySelectorAll('.progress-line')
 
 
-// function showProgress() {
-//     progressBar.forEach(progressBar => {
-//         const value = progressBar.dataset.progress;
-//         progressBar.style.opacity = 1;
-//         progressBar.style.width = `${value}`;
-//     });
-// }
+function showProgress() {
+    skillSection.style.opacity = 1;
+    skillSection.style.transition = opacity; 1;
 
-// function hideProgress() {
-//     progressBar.forEach(progressBar => { 
-//         progressBar.style.opacity = 0;
-//         progressBar.style.width = 0;
-//     });
-// }
+    progressBar.forEach(progress => {
+        progress.style.opacity = 1;
+        progress.style.with = 1;
+    })
+}
 
-// window.addEventListener('scroll', () => {
-//     skillSection.getBoundingClientRect() === null ? null : skillSection.getBoundingClientRect()
-//     const sectionPos = skillSection.getBoundingClientRect().top;
-//     sectionPos !== null? sectionPos : null;
-//     const screenPos = window.innerHeight;
+function hideProgress() {
+    skillSection.style.opacity = 0;
+    // progressBar.forEach(progress => {
+    //     progress.style.opacity = 0;
+    //     progress.style.with = 0;
+    // })
+}
 
-//     if(sectionPos < screenPos) {
-//         showProgress();
-//     }else {
-//         hideProgress();
-//     }
-// })
+window.addEventListener('scroll', () => {
+
+    const sectionPos = skillSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight;
+
+    if(sectionPos < screenPos) {
+        showProgress();
+    }else {
+        hideProgress();
+    }
+})
