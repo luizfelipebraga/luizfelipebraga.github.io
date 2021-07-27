@@ -23,7 +23,7 @@ section:first-child {
 }
 
 .paralax {
-    background-image: url("./images/star4.jpg");
+    background-image: url("../images/star4.jpg");
     min-height: 100%;
     position: relative;
     /* opacity: 0.65; */
