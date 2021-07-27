@@ -1,3 +1,3 @@
-#missing projects with a timeline
+Project about myself, with infos of the projects that i've done and others things.
 
-Infos about myself. :)
+enjoy :)
