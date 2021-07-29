@@ -40,7 +40,7 @@ section:first-child {
     color: #fff;
     position: absolute;
     width: 100%;
-    top: 30%;
+    top: 10%;
 }
 
 .subtitle {
@@ -133,7 +133,7 @@ span {
     margin: 0 auto;
     position: absolute;
     width: 100%;
-    top: 50%;
+    top: 15%;
 }
 
 #introduction footer>a>img {
@@ -142,26 +142,28 @@ span {
 }
 
 #projetos {
-    background: #101010;
+    background-color: rgb(3 27 64 / 50%);
 }
 
 #formacao {
-    background: #f9f9f9;
+    background-color: rgb(3 27 64 / 50%);
     height: 100%;
 }
 
 #skills {
+    background-color: rgb(3 27 64 / 50%);
     height: 100%;
+    color: #fff;
 }
 
 #myself {
     height: 100%;
-    background: #f2f2f2;
+    background-color: rgb(0 0 0 / 70%);
 }
 
 h1 {
     font-size: 1.4rem;
-    color: #000;
+    color: #fff;
     display: flex;
     justify-content: center;
 
@@ -182,7 +184,7 @@ h2 {
     font-weight: bold;
 }
 
-h4 {
+.container-skills h4 {
     margin-bottom: 1rem;
 }
 
@@ -191,26 +193,27 @@ h4 {
     flex-wrap: wrap;
     gap: 2rem;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1350px;
     padding-bottom: 1.5rem;
 }
 
 .containerFormacao .container-EnsinoMedioSenai {
-    flex: 6;
+    flex: 1 1 300px;
     flex-direction: column;
 
     padding: 2rem 3rem;
 
     min-height: 300px;
 
-    background: #fff;
+    background: #29292996;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
 }
 
-.container-EnsinoMedioSenai h3 {
+.container-EnsinoMedioSenai h4 {
+    text-align: center;
     width:100%;
-    padding: 1rem 1rem;
+    padding: .4rem;
     border-radius: .9rem;
     background: rgb(250, 250, 250)
 }
@@ -221,6 +224,7 @@ h4 {
 }
 
 .maincontent li {
+    color: #fff;
     font-size: .9rem;
 }
 
@@ -244,7 +248,7 @@ div>li {
 
 .infos>img {
     font-size: 0;
-    width: 8rem;
+    height: 3rem;
     border-radius: 5%;
     object-fit: cover;
 }
@@ -266,7 +270,7 @@ div>li {
     flex-direction: column;
     
     width: 31.25rem;
-    background: #fff;
+    background: #29292996;
     border-radius: 10px;
     padding: 1rem 1rem;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -488,7 +492,7 @@ div>li {
 }
 
 .timeline-section {
-    background-color: #101010;
+    background-color: rgb(3 27 64 / 50%);
     min-height: 90vh;
 }
 
@@ -601,6 +605,7 @@ a {
     flex-direction: column;
     align-items: left;
     text-align: left;
+    color: #fff;
 }
 
 .containerInfos>.infosAboutMe li {
