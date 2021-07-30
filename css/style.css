@@ -28,6 +28,31 @@ section:first-child {
           flex-direction: column;
 }
 
+#introduction footer > a > img {
+  margin-left: 10px;
+  width: 3rem;
+}
+
+#projetos {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#formacao {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+}
+
+#skills {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  color: #fff;
+}
+
+#myself {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .paralax {
   background-image: url("../images/star4.jpg");
   min-height: 100%;
@@ -40,10 +65,29 @@ section:first-child {
   z-index: 2;
 }
 
-.title {
+.containerIntroduction {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 80vh;
+  width: 100%;
+  margin-bottom: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.containerIntroduction .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -54,7 +98,21 @@ section:first-child {
   color: #fff;
   position: absolute;
   width: 100%;
-  top: 10%;
+}
+
+.containerIntroduction footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  width: 100%;
+  margin-top: 15rem;
 }
 
 .subtitle {
@@ -177,47 +235,6 @@ span {
   font: 700 2rem 'Inter', sans-serif;
 }
 
-#introduction footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 auto;
-  position: absolute;
-  width: 100%;
-  top: 15%;
-}
-
-#introduction footer > a > img {
-  margin-left: 10px;
-  width: 3rem;
-}
-
-#projetos {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-#formacao {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-}
-
-#skills {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  color: #fff;
-}
-
-#myself {
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
 h1 {
   font-size: 1.4rem;
   color: #fff;
@@ -258,10 +275,28 @@ h2 {
   gap: .4rem;
 }
 
+.icon path {
+  stroke-width: 1;
+}
+
+.icon.html path {
+  stroke-width: 2;
+  stroke: #f55f19;
+  stroke-dasharray: 1560;
+  stroke-dashoffset: 1560;
+}
+
+.icon.html path {
+  stroke-width: 2;
+  stroke: #f55f19;
+  stroke-dasharray: 1560;
+  stroke-dashoffset: 1560;
+}
+
 .box_cvbutton {
   display: block;
   text-align: center;
-  margin-top: 3rem;
+  padding: 2rem 0;
 }
 
 .btn {
