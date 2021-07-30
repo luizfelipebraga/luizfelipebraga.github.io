@@ -34,16 +34,16 @@ section:first-child {
 }
 
 #projetos {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 #formacao {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   height: 100%;
 }
 
 #skills {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.65);
   height: 100%;
   color: #fff;
 }
@@ -338,7 +338,7 @@ h2 {
     fill: transparent;
   }
   100% {
-    stroke-dashoffset: 3120;
+    stroke-dashoffset: 4120;
   }
 }
 
@@ -354,7 +354,7 @@ h2 {
     fill: transparent;
   }
   100% {
-    stroke-dashoffset: 3120;
+    stroke-dashoffset: 4120;
   }
 }
 
@@ -402,6 +402,8 @@ h2 {
 }
 
 .container-skills h4 {
+  padding: 1rem;
+  background: #1010107d;
   margin-bottom: 1rem;
 }
 
@@ -430,16 +432,32 @@ h2 {
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
+  -webkit-transition: -webkit-filter .2s;
+  transition: -webkit-filter .2s;
+  transition: filter .2s;
+  transition: filter .2s, -webkit-filter .2s;
+}
+
+.containerFormacao .container-EnsinoMedioSenai:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.containerFormacao .container-EnsinoMedioSenai:hover h4 {
+  -webkit-box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2);
+          box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2);
 }
 
 .container-EnsinoMedioSenai h4 {
+  font-size: 1.25rem;
+  color: #fff;
   text-align: center;
   width: 100%;
   padding: 1rem;
   border-radius: .3rem;
-  background: #fafafa;
-  -webkit-box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
-          box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
+  background: #1010107d;
 }
 
 .maincontent {
@@ -478,9 +496,10 @@ div > li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
-          box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
+  border-radius: .6rem;
   padding: .6rem 0;
+  -webkit-box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.62);
+          box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.62);
 }
 
 .infos > img {
@@ -518,9 +537,18 @@ div > li {
   width: 31.25rem;
   background: #29292996;
   border-radius: 10px;
-  padding: 1rem 1rem;
+  padding: 1rem 2rem;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: -webkit-filter .2s;
+  transition: -webkit-filter .2s;
+  transition: filter .2s;
+  transition: filter .2s, -webkit-filter .2s;
+}
+
+.container-skills .skills-bar:hover {
+  -webkit-filter: brightness(1.15);
+          filter: brightness(1.15);
 }
 
 .skills-bar .bar {
@@ -635,6 +663,14 @@ div > li {
 
 .bar .progress-line.esp span {
   width: 30%;
+}
+
+.bar .progress-line.esp span::after {
+  top: 100%;
+}
+
+.bar .progress-line.esp span::before {
+  top: 0;
 }
 
 .bar .progress-line.jap span {
@@ -826,15 +862,15 @@ div > li {
 }
 
 .timeline-content {
-  background-color: #292929;
+  background-color: #292929e0;
   padding: 30px;
   border-radius: 5px;
   -webkit-transition: -webkit-filter 0.2s;
   transition: -webkit-filter 0.2s;
   transition: filter 0.2s;
   transition: filter 0.2s, -webkit-filter 0.2s;
-  -webkit-box-shadow: 5px 5px 10px rgba(255, 106, 0, 0.34);
-          box-shadow: 5px 5px 10px rgba(255, 106, 0, 0.34);
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.34);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.34);
 }
 
 .timeline-content:hover {
