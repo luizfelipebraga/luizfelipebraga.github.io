@@ -47,6 +47,8 @@ section:first-child {
     background-color: rgba(0, 0, 0, .70);
 }
 
+
+//efeito paralax
 .paralax {
     background-image: url("../images/star4.jpg");
     min-height: 100%;
@@ -200,6 +202,8 @@ h2 {
     font-weight: bold;
 }
 
+
+//efeito de hover em um icon svg
 .icon {
     height: 1.3rem;
     display: flex;
@@ -211,23 +215,75 @@ h2 {
     }
 
     &.html path {
-        stroke-width: 2;
-        stroke: #f55f19;
         stroke-dasharray: 1560;
+        stroke-dashoffset: 0;
+        stroke: #f55f19;
+    }
+
+    &.css path {
+        stroke-dasharray: 1560;
+        stroke-dashoffset: 0;
+        stroke: #039ae4;
+    }
+
+    &.js path {
+        stroke-dasharray: 1560;
+        stroke-dashoffset: 0;
+        stroke: #fed500;
+    }
+
+    &.react path {
+        stroke-dasharray: 1560;
+        stroke-dashoffset: 0;
+        stroke: #7fdde9;
+    }
+
+    &.csharp path {
+        stroke-dasharray: 1560;
+        stroke-dashoffset: 0;
+        stroke: #546e79;
+    }
+
+    &.java path {
+        stroke-dasharray: 1560;
+        stroke-dashoffset: 0;
+        stroke: #3b5fa7;
+    }
+
+    &.spring path {
+        stroke-dasharray: 1560;
+        stroke-dashoffset: 0;
+        stroke: #8ac24a;
+    }
+}
+
+.icon path {
+    animation: animate-icon 3s linear infinite;
+}
+
+@keyframes animate-icon {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
         stroke-dashoffset: 1560;
     }
 
-    &.html path {
-        stroke-width: 2;
-        stroke: #f55f19;
-        stroke-dasharray: 1560;
-        stroke-dashoffset: 1560;
+    80% {
+        stroke-dashoffset: 3120;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 3120;
     }
 }
 
 .box_cvbutton {
     display: block;
     text-align: center;
+    margin-top: 1rem;
     padding: 2rem 0;
 }
 
@@ -304,9 +360,10 @@ h2 {
 .container-EnsinoMedioSenai h4 {
     text-align: center;
     width: 100%;
-    padding: .4rem;
-    border-radius: .9rem;
-    background: rgb(250, 250, 250)
+    padding: 1rem;
+    border-radius: .3rem;
+    background: rgb(250, 250, 250);
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
 }
 
 .maincontent {
@@ -334,8 +391,8 @@ div>li {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
-    margin-top: 2rem;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
+    padding: .6rem 0;
 }
 
 .infos>img {
@@ -644,6 +701,7 @@ div>li {
     padding: 30px;
     border-radius: 5px;
     transition: filter 0.2s;
+    box-shadow: 5px 5px 10px rgba(255, 106, 0, 0.34);
 }
 
 .timeline-content:hover {
