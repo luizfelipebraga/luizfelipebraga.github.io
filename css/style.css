@@ -247,6 +247,17 @@ h2 {
   font-weight: bold;
 }
 
+.icon {
+  height: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .4rem;
+}
+
 .box_cvbutton {
   display: block;
   text-align: center;
@@ -417,7 +428,7 @@ div > li {
 }
 
 .skills-bar .bar .info {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 .skills-bar .bar .progress-line {
@@ -822,9 +833,6 @@ a {
   }
   .timeline-section {
     min-height: 100vh;
-  }
-  .skills-bar .bar {
-    margin: 15px 0;
   }
   .skills-bar {
     width: 28rem;
