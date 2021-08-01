@@ -190,8 +190,6 @@ h1 {
 
 hr {
     border: 1px solid rgb(214, 214, 214);
-    display: flex;
-    margin: 0 auto;
     width: 30%;
     box-shadow: 2px 2px 3px rgba(235, 235, 235, 0.2);
 }
@@ -358,42 +356,53 @@ h2 {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
 
+    padding: 1rem;
+
     transition:filter .2s;
+
+    h4 {
+        font-size: 1.1rem;
+        color: #fff;
+        width: 100%;
+        border-radius: .3rem;
+    }
 
     &:hover {
         filter: brightness(1.1);
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.20);
-
-        h4 {
-            box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.20);
-        }
     }
 }
 
-.container-EnsinoMedioSenai h4 {
-    font-size: 1.25rem;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    padding: 1rem;
-    border-radius: .3rem;
-    background: #636363b5;
+.titleSchool {
+    text-align: left;
+    align-items: left;
+    background: #1010107d;
+    padding: 1rem 1rem;
+
+    box-shadow: 1px 1px 10px rgba(199, 199, 199, .35);
+
+    hr {
+        margin-top: .5rem;
+    }
 }
 
 .maincontent {
     display: flex;
     flex-direction: column;
-    padding: 2rem 3rem;
-}
+    padding: 1rem 1rem;
 
-.maincontent li {
-    color: #fff;
-    font-size: .9rem;
-}
+    li {
+        color: #bebebe;
+        font-size: .9rem;
+        font-weight: 500;
+        margin-top: 2rem;
+        letter-spacing: 0.03rem;
+        line-height: 1.5rem;
+    }
 
-.maincontent div>li {
-    font-weight: 500;
-    margin-top: 2rem;
+    strong {
+        color: #fff;
+    }
 }
 
 div>li {
@@ -406,15 +415,16 @@ div>li {
     justify-content: center;
     align-items: center;
     border-radius: .6rem;
-    padding: .6rem 0;
-    box-shadow: 1px 1px 30px rgba(0, 0, 0, .62);
-}
+    padding: .8rem 0;
 
-.infos>img {
-    font-size: 0;
-    height: 3rem;
-    border-radius: 5%;
-    object-fit: cover;
+    img {
+        font-size: 0;
+        height: 3rem;
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
+        border-radius: 5%;
+        object-fit: cover;
+    }
 }
 
 .container-skills {
@@ -425,37 +435,37 @@ div>li {
     margin: 0 auto;
     max-width: 1368px;
     padding: 1.5rem 0;
-}
 
-.container-skills .skills-bar {
-    flex: 1 1 400px;
+    .skills-bar {
+        flex: 1 1 400px;
 
-    display: flex;
-    flex-direction: column;
-    
-    width: 31.25rem;
-    background: #29292996;
-    border-radius: 10px;
-    padding: 1rem 2rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        
+        width: 31.25rem;
+        background: #29292996;
+        border-radius: 10px;
+        padding: 1rem 2rem;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 
-    transition: filter .2s;
+        transition: filter .2s;
 
-    &:hover {
-        filter: brightness(1.15);
+        &:hover {
+            filter: brightness(1.15);
+        }
     }
 }
 
 .skills-bar .bar {
     margin: 20px 0;
-}
 
-.skills-bar .bar:first-child {
-    margin-top: 0px;
-}
+    &:first-child {
+        margin-top: 0px;
+    }
 
-.skills-bar .bar .info {
-    margin-bottom: 20px;
+    .info {
+        margin-bottom: 20px;
+    }
 }
 
 .skills-bar .bar .progress-line {
@@ -467,17 +477,17 @@ div>li {
     transform: scaleX(0);
     transform-origin: left;
     animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
-}
 
-.skills-bar .bar .progress-line span {
-    height: 100%;
-    width: 80%;
-    background: #f55f19;
-    border-radius: 10px;
-    position: absolute;
-    transform: scaleX(0);
-    transform-origin: left;
-    animation: animate 2s 2s cubic-bezier(1, 0, 0.5, 1) forwards;
+    span {
+        height: 100%;
+        width: 80%;
+        background: #f55f19;
+        border-radius: 10px;
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: animate 2s 2s cubic-bezier(1, 0, 0.5, 1) forwards;
+    }
 }
 
 @keyframes animate {
@@ -486,73 +496,75 @@ div>li {
     }
 }
 
-.bar .progress-line.html span {
-    width: 90%;
-}
+.bar .progress-line {
 
-.bar .progress-line.css span {
-    width: 75%;
-}
-
-.bar .progress-line.js span {
-    width: 65%;
-}
-
-.bar .progress-line.csharp span {
-    width: 65%;
-}
-
-.bar .progress-line.react span {
-    width: 85%;
-}
-
-.bar .progress-line.java span {
-    width: 50%;
-}
-
-.bar .progress-line.springboot span {
-    width: 50%;
-}
-
-.bar .progress-line.colaboracao span {
-    width: 90%;
-}
-
-.bar .progress-line.comu span {
-    width: 85%;
-}
-
-.bar .progress-line.pressao span {
-    width: 85%;
-}
-
-.bar .progress-line.flexibilidade span {
-    width: 90%;
-}
-
-.bar .progress-line.autodidata span {
-    width: 85%;
-}
-
-.bar .progress-line.port span {
-    width: 100%;
-}
-
-.bar .progress-line.eng span {
-    width: 85%;
-}
-
-.bar .progress-line.esp span {
-    width: 30%;
-
-    &::after {
-        top: 100%;
+    &.html span {
+        width: 90%;
     }
 
-    &::before {
-        top: 0;
+    &.css span {
+        width: 75%;
     }
+
+    &.js span {
+        width: 65%;
+    }
+
+    &.csharp span {
+        width: 65%;
+    }
+
+    &.react span {
+        width: 85%;
+    }
+
+    &.java span {
+        width: 50%;
+    }
+
+    &.springboot span {
+        width: 50%;
+    }
+
+    &.colaboracao span {
+        width: 90%;
+    }
+
+    &.comu span {
+        width: 85%;
+    }
+
+    &.pressao span {
+        width: 85%;
+    }
+
+    &.flexibilidade span {
+        width: 90%;
+    }
+
+    &.autodidata span {
+        width: 85%;
+    }
+
+    &.port span {
+        width: 100%;
+    }
+
+    &.eng span {
+        width: 85%;
+    }
+
+    &.esp span {
+        width: 30%;
+
+        &::after {
+            top: 100%;
+        }
     
+        &::before {
+            top: 0;
+        }
+    }
 }
 
 .bar .progress-line.jap span {
@@ -613,11 +625,11 @@ div>li {
 }
 
 .bar .progress-line.java span::after {
-    content: "60%";
+    content: "50%";
 }
 
 .bar .progress-line.springboot span::after {
-    content: "60%";
+    content: "50%";
 }
 
 .bar .progress-line.colaboracao span::after {
