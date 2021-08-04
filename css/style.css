@@ -424,7 +424,7 @@ h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 300px;
-  background: #29292996;
+  background: #292929cf;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
@@ -684,7 +684,7 @@ div > li {
   width: 5%;
 }
 
-.bar .progress-line span::before {
+.bar .progress-line span:before {
   position: absolute;
   content: "";
   right: 0;
@@ -697,7 +697,7 @@ div > li {
   border-top-color: #000;
 }
 
-.bar .progress-line span::after {
+.bar .progress-line span:after {
   position: absolute;
   right: 0;
   top: -28px;
@@ -804,13 +804,13 @@ div > li {
   }
 }
 
-.timeline-section > h1 {
-  color: #fff;
-}
-
 .timeline-section {
   background-color: rgba(0, 0, 0, 0.5);
   min-height: 90vh;
+}
+
+.timeline-section > h1 {
+  color: #fff;
 }
 
 .timeline-items {
@@ -825,7 +825,7 @@ div > li {
   margin-top: 2rem;
 }
 
-.timeline-items::before {
+.timeline-items:before {
   content: '';
   position: absolute;
   width: 2px;
@@ -880,16 +880,6 @@ div > li {
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.34);
 }
 
-.timeline-content:hover {
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
-}
-
-a {
-  cursor: pointer;
-  text-decoration: none;
-}
-
 .timeline-content h3 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -912,10 +902,22 @@ a {
   text-align: left;
 }
 
+.timeline-content:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .containerInfos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -949,11 +951,11 @@ a {
   color: #fff;
 }
 
-.containerInfos > .infosAboutMe li {
+.containerInfos .infosAboutMe li {
   padding-top: .5rem;
 }
 
-.containerInfos .infoEmail, .infoLinkedin, .infoGithub {
+.containerInfos .infoEmail, .containerInfos .infoLinkedin, .containerInfos .infoGithub {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -992,6 +994,9 @@ a {
   html {
     font-size: 80.75%;
   }
+  .containerIntroduction .name-box > span {
+    font-size: 2.5rem;
+  }
   .skills-bar {
     width: 17rem;
   }
@@ -1012,7 +1017,7 @@ a {
 
 @media (max-width: 500px) {
   html {
-    font-size: 76.75%;
+    font-size: 78.75%;
   }
 }
 /*# sourceMappingURL=style.css.map */
