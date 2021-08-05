@@ -392,14 +392,16 @@ h2 {
     display: flex;
     flex-direction: column;
     padding: 1rem 1rem;
+    background: #00000087;
+    height: 88%;
 
     li {
         color: #bebebe;
         font-size: .9rem;
         font-weight: 500;
-        margin-top: 2rem;
+        margin-top: 1.6rem;
         letter-spacing: 0.03rem;
-        line-height: 1.5rem;
+        line-height: 1.4rem;
     }
 
     strong {
@@ -409,7 +411,7 @@ h2 {
 
 div>li {
     font-weight: 500;
-    margin-top: 1.2rem;
+    margin-top: 1rem;
 }
 
 .infos {
