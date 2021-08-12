@@ -28,22 +28,23 @@ section:first-child {
 }
 
 #projetos {
+    padding: 100px;
     background-color: rgba(0, 0, 0, .60);
 }
 
 #formacao {
+    padding: 100px;
     background-color: rgba(0, 0, 0, .70);
-    height: 100%;
 }
 
 #skills {
+    padding: 100px;
     background-color: rgba(0, 0, 0, .65);
-    height: 100%;
     color: #fff;
 }
 
 #myself {
-    height: 100%;
+    padding: 50px;
     background-color: rgba(0, 0, 0, .70);
 }
 
@@ -101,11 +102,21 @@ section:first-child {
     justify-content: center;
     align-items: center;
 
-    padding: 2rem 0rem 1rem 0rem;
-}
+    margin-bottom: 3rem;
+    
+    h2 {
+        color: #fff;
+    }
 
-.subtitle hr {
-    margin-top: 1rem;
+    span {
+        color: #f1b549bf;
+        margin-top: .5rem;
+        font-size: 1.1rem;
+    }
+
+    hr {
+        margin-top: .2rem;
+    } 
 }
 
 .timeline-section .subtitle h1 {
@@ -180,7 +191,7 @@ span {
 
 
 h1 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -196,10 +207,9 @@ hr {
 
 h2 {
     color: #000;
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     font-weight: bold;
 }
-
 
 //efeito de hover em um icon svg
 .icon {
@@ -345,7 +355,7 @@ h2 {
     gap: 2rem;
     margin: 0 auto;
     max-width: 1350px;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
 }
 
 .containerFormacao .container-EnsinoMedioSenai {
@@ -360,7 +370,7 @@ h2 {
 
     padding: 1rem;
 
-    transition:filter .2s;
+    transition: filter .2s;
 
     h4 {
         font-size: 1.1rem;
@@ -372,6 +382,7 @@ h2 {
     &:hover {
         filter: brightness(1.1);
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.20);
+        font-size: 2rem;
     }
 }
 
@@ -686,8 +697,7 @@ div>li {
 
 .timeline-section {
     background-color: rgba(0, 0, 0, .50);
-    min-height: 90vh;
-
+    padding: 100px;
     >h1 {
         color: #fff;
     }
@@ -837,6 +847,12 @@ a {
     html {
         font-size: 90.75%;
     }
+    
+    #formacao, #skills, .timeline-section {
+        padding: 50px;
+    }
+
+    
 
     .timeline-section {
         min-height: 100vh;

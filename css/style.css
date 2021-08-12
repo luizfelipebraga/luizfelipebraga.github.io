@@ -34,22 +34,23 @@ section:first-child {
 }
 
 #projetos {
+  padding: 100px;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 #formacao {
+  padding: 100px;
   background-color: rgba(0, 0, 0, 0.7);
-  height: 100%;
 }
 
 #skills {
+  padding: 100px;
   background-color: rgba(0, 0, 0, 0.65);
-  height: 100%;
   color: #fff;
 }
 
 #myself {
-  height: 100%;
+  padding: 50px;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -129,11 +130,21 @@ section:first-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 0rem 1rem 0rem;
+  margin-bottom: 3rem;
+}
+
+.subtitle h2 {
+  color: #fff;
+}
+
+.subtitle span {
+  color: #f1b549bf;
+  margin-top: .5rem;
+  font-size: 1.1rem;
 }
 
 .subtitle hr {
-  margin-top: 1rem;
+  margin-top: .2rem;
 }
 
 .timeline-section .subtitle h1 {
@@ -236,7 +247,7 @@ span {
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -256,7 +267,7 @@ hr {
 
 h2 {
   color: #000;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   font-weight: bold;
 }
 
@@ -413,7 +424,7 @@ h2 {
   gap: 2rem;
   margin: 0 auto;
   max-width: 1350px;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
 }
 
 .containerFormacao .container-EnsinoMedioSenai {
@@ -448,6 +459,7 @@ h2 {
           filter: brightness(1.1);
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
 }
 
 .titleSchool {
@@ -809,7 +821,7 @@ div > li {
 
 .timeline-section {
   background-color: rgba(0, 0, 0, 0.5);
-  min-height: 90vh;
+  padding: 100px;
 }
 
 .timeline-section > h1 {
@@ -984,6 +996,9 @@ a {
 @media (max-width: 1600px) {
   html {
     font-size: 90.75%;
+  }
+  #formacao, #skills, .timeline-section {
+    padding: 50px;
   }
   .timeline-section {
     min-height: 100vh;
