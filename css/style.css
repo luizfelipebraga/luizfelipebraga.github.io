@@ -18,23 +18,22 @@ h5,
 span,
 li,
 p,
-a {
+a,
+details {
   font-family: "Inter", sans-serif;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 section:first-child {
   width: 100%;
   height: 100vh;
-}
-
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #101113), color-stop(22%, rgba(16, 17, 19, 0.9)), color-stop(37%, rgba(16, 17, 19, 0.8)), color-stop(67%, rgba(16, 17, 19, 0.9)), color-stop(98%, #101113));
+  background: linear-gradient(#101113 5%, rgba(16, 17, 19, 0.9) 22%, rgba(16, 17, 19, 0.8) 37%, rgba(16, 17, 19, 0.9) 67%, #101113 98%);
 }
 
 #introduction footer > a > img {
@@ -43,28 +42,41 @@ section:first-child {
 }
 
 #projetos {
+  scroll-snap-align: start;
   padding: 100px;
 }
 
 .timeline-section {
+  scroll-snap-align: start;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, rgba(16, 17, 19, 0.888)), color-stop(25%, rgba(0, 0, 0, 0.6)), color-stop(37%, rgba(0, 0, 0, 0.6)), color-stop(67%, rgba(0, 0, 0, 0.541)));
   background: linear-gradient(rgba(16, 17, 19, 0.888) 5%, rgba(0, 0, 0, 0.6) 25%, rgba(0, 0, 0, 0.6) 37%, rgba(0, 0, 0, 0.541) 67%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #formacao {
+  scroll-snap-align: start;
   padding: 100px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, rgba(16, 17, 19, 0.938)), color-stop(25%, #101113), color-stop(37%, #101113), color-stop(67%, #101113));
-  background: linear-gradient(rgba(16, 17, 19, 0.938) 5%, #101113 25%, #101113 37%, #101113 67%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, rgba(16, 17, 19, 0.8)), color-stop(25%, #101113), color-stop(37%, #101113), color-stop(67%, #101113));
+  background: linear-gradient(rgba(16, 17, 19, 0.8) 5%, #101113 25%, #101113 37%, #101113 67%);
 }
 
 #skills {
+  scroll-snap-align: start;
   padding: 100px;
   color: #fff;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #101113), color-stop(92%, #101113), color-stop(93%, rgba(16, 17, 19, 0.888)));
-  background: linear-gradient(#101113 20%, #101113 92%, rgba(16, 17, 19, 0.888) 93%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, rgba(16, 17, 19, 0.8)), color-stop(20%, #101113), color-stop(92%, #101113), color-stop(93%, rgba(16, 17, 19, 0.888)));
+  background: linear-gradient(rgba(16, 17, 19, 0.8) 5%, #101113 20%, #101113 92%, rgba(16, 17, 19, 0.888) 93%);
 }
 
 #myself {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  scroll-snap-align: start;
   padding: 50px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, black), color-stop(90%, rgba(16, 17, 19, 0.877)));
   background: linear-gradient(black 1%, rgba(16, 17, 19, 0.877) 90%);
@@ -80,6 +92,9 @@ section:first-child {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 2;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  overflow: y;
 }
 
 .containerIntroduction {
@@ -157,6 +172,7 @@ section:first-child {
   color: #f1b549bf;
   margin-top: 0.5rem;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 .subtitle hr {
@@ -454,7 +470,7 @@ h2 {
   background: white;
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-  font-family: roboto;
+  font-family: Inter, sans-serif;
   text-align: center;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -509,7 +525,7 @@ h2 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: text;
-  margin: 25px;
+  padding: 1rem 2rem;
 }
 
 .card .card-text .date {
@@ -530,8 +546,15 @@ h2 {
 
 .card .card-text p {
   color: grey;
-  font-size: 15px;
+  margin-top: .5rem;
+  font-size: .895rem;
   font-weight: 300;
+  text-align: left;
+  width: 100%;
+}
+
+.card .card-text p strong {
+  color: #494949;
 }
 
 .card .card-text h2 {
@@ -672,8 +695,8 @@ div > li {
 
 .container-skills .skills-bar {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 400px;
-          flex: 1 1 400px;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1040,6 +1063,10 @@ div > li {
           filter: brightness(1.1);
 }
 
+.timeline-content span:last-child {
+  margin-top: 1rem;
+}
+
 .timeline-content h3 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1060,6 +1087,22 @@ div > li {
   font-weight: 300;
   line-height: 22px;
   text-align: left;
+}
+
+.timeline-content span {
+  display: block;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.timeline-content .btn-languages {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
 }
 
 a {
@@ -1139,10 +1182,16 @@ a {
   html {
     font-size: 90.75%;
   }
+  #formacao, #skills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   #formacao,
   #skills,
   .timeline-section {
-    padding: 50px;
+    padding: 100px;
   }
   .timeline-section {
     min-height: 100vh;

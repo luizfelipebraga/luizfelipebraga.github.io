@@ -17,18 +17,19 @@ h5,
 span,
 li,
 p,
-a {
+a,
+details {
     font-family: "Inter", sans-serif;
+}
+
+section {
+    display: flex;
 }
 
 section:first-child {
     width: 100%;
     height: 100vh;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
+    background: linear-gradient(rgb(16, 17, 19) 5%, rgba(16, 17, 19, 0.90) 22%, rgba(16, 17, 19, 0.80) 37%, rgba(16, 17, 19, 0.90) 67%, rgb(16, 17, 19) 98% );
 }
 
 #introduction footer > a > img {
@@ -37,29 +38,36 @@ section:first-child {
 }
 
 #projetos {
+    scroll-snap-align: start;
     padding: 100px;
 }
 
 .timeline-section {
+    scroll-snap-align: start;
     background: linear-gradient(rgba(16, 17, 19, 0.888) 5%, rgba(0, 0, 0, 0.6) 25%, rgba(0, 0, 0, 0.6) 37%, rgba(0, 0, 0, 0.541) 67%);
+    flex-direction: column;
 }
 
 #formacao {
+    scroll-snap-align: start;
     padding: 100px;
-    background: linear-gradient(rgba(16, 17, 19, 0.938) 5%, rgb(16, 17, 19) 25%, rgb(16, 17, 19,) 37%, rgb(16, 17, 19,) 67%);
+    background: linear-gradient(rgba(16, 17, 19, 0.8) 5%, rgb(16, 17, 19) 25%, rgb(16, 17, 19,) 37%, rgb(16, 17, 19,) 67%);
     // background: linear-gradient(rgba(0, 0, 0, 0.726) 2%,rgba(0, 0, 0, 0.8) 10% rgb(16, 17, 19) 15%, rgb(16, 17, 19) 37%, rgb(16, 17, 19) 90%, rgba(16, 17, 19, 0.938) 98%);
 
     // background: linear-gradient(rgba(0, 0, 0, 0.233) 2%, rgba(16, 17, 19, 0.503) 5%, rgba(16, 17, 19, 0.703) 8% rgba(16, 17, 19, 0.903) 10%, rgb(16, 17, 19) 37%, rgba(0, 0, 0, 0.74) 90% rgba(0, 0, 0, 0.726) 98%);
 }
 
 #skills {
+    scroll-snap-align: start;
     padding: 100px;
     color: #fff;
-    background: linear-gradient( rgb(16, 17, 19) 20%, rgb(16, 17, 19) 92%, rgba(16, 17, 19, 0.888) 93%);
+    background: linear-gradient( rgba(16, 17, 19, 0.8) 5%,rgb(16, 17, 19) 20%, rgb(16, 17, 19) 92%, rgba(16, 17, 19, 0.888) 93%);
     // background: rgb(16, 17, 19);
 }
 
 #myself {
+    flex-direction: column;
+    scroll-snap-align: start;
     padding: 50px;
     background: linear-gradient(rgb(0, 0, 0) 1%, rgba(16, 17, 19, 0.877) 90%);
 }
@@ -76,6 +84,9 @@ section:first-child {
     background-size: cover;
 
     z-index: 2;
+
+    scroll-snap-type: y mandatory;
+    overflow: y;
 }
 
 .containerIntroduction {
@@ -123,6 +134,7 @@ section:first-child {
         color: #f1b549bf;
         margin-top: 0.5rem;
         font-size: 1.1rem;
+        text-align: center;
     }
 
     hr {
@@ -372,7 +384,7 @@ h2 {
     border-radius: 18px;
     background: white;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
-    font-family: roboto;
+    font-family: Inter, sans-serif;
     text-align: center;
 
     transition: 0.5s ease;
@@ -414,7 +426,7 @@ h2 {
 
     .card-text {
         grid-area: text;
-        margin: 25px;
+        padding: 1rem 2rem;
 
         .date {
             font-size: 13px;
@@ -434,8 +446,15 @@ h2 {
 
         p {
             color: grey;
-            font-size: 15px;
+            margin-top: .5rem;
+            font-size: .895rem;
             font-weight: 300;
+            text-align: left; 
+            width: 100%;
+
+            strong {
+                color: rgb(73, 73, 73);
+            }
         }
 
         h2 {
@@ -546,7 +565,7 @@ div > li {
     padding: 1.5rem 0;
 
     .skills-bar {
-        flex: 1 1 400px;
+        flex: 1;
 
         display: flex;
         flex-direction: column;
@@ -869,6 +888,10 @@ div > li {
         filter: brightness(1.1);
     }
 
+    span:last-child {
+        margin-top: 1rem;
+    }
+
     h3 {
         display: flex;
         justify-content: center;
@@ -885,6 +908,21 @@ div > li {
         font-weight: 300;
         line-height: 22px;
         text-align: left;
+    }
+
+    span {
+        display: block;
+        color: #fff;
+        font-size: 1.1rem;
+    }
+
+    .btn-languages {
+        border: 0;
+        background: transparent;
+        color: #fff;
+
+        display: flex;
+        margin: 0 auto;
     }
 }
 
@@ -952,10 +990,14 @@ a {
         font-size: 90.75%;
     }
 
+    #formacao, #skills {
+        flex-direction: column;
+    }
+
     #formacao,
     #skills,
     .timeline-section {
-        padding: 50px;
+        padding: 100px;
     }
 
     .timeline-section {
