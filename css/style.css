@@ -561,7 +561,7 @@ h2 {
   display: block;
   text-align: center;
   margin-top: 1rem;
-  padding: 2rem 0;
+  padding-top: 6rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
