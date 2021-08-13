@@ -286,6 +286,94 @@ section:first-child {
 }
 
 /* Animation */
+.logo {
+  text-align: center;
+  width: 100%;
+}
+
+.logo b {
+  font: 600 1.3rem 'Inter', sans-serif;
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #f1610e, 0 0 0.5em #f1610e, 0 0 0.1em #f1610e, 0 10px 3px #000;
+}
+
+.logo b span {
+  font-size: 2.5rem;
+  -webkit-animation: blink linear infinite 2s;
+          animation: blink linear infinite 2s;
+}
+
+.logo b span:nth-of-type(2) {
+  -webkit-animation: blink linear infinite 3s;
+          animation: blink linear infinite 3s;
+}
+
+@-webkit-keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    color: #333;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79% {
+    color: #333;
+  }
+  80% {
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
 .anim-typewriter {
   -webkit-animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 700ms steps(44) infinite normal;
           animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 700ms steps(44) infinite normal;
@@ -1321,7 +1409,10 @@ a {
     padding: 50px;
   }
   .containerIntroduction .name-box > span {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+  }
+  .containerIntroduction .logo b span {
+    font-size: 3rem;
   }
   .subtitle {
     text-align: center;
