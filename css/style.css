@@ -1133,6 +1133,10 @@ div > li {
   }
 }
 
+.projectsLanguages {
+  display: none;
+}
+
 .timeline-section {
   padding: 100px;
 }
@@ -1163,18 +1167,23 @@ div > li {
 }
 
 .timeline-item {
-  margin-bottom: 40px;
   width: 100%;
   position: relative;
-  -webkit-transition: -webkit-transform 0.2s ease;
-  transition: -webkit-transform 0.2s ease;
-  transition: transform 0.2s ease;
-  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .timeline-item:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.timeline-item:hover .projectsLanguages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1rem;
+  gap: .3rem;
 }
 
 .timeline-item:last-child {
@@ -1188,11 +1197,6 @@ div > li {
 
 .timeline-item:nth-child(even) {
   padding-left: calc(50% + 30px);
-}
-
-.timeline-item details {
-  color: #fff;
-  margin-top: 1rem;
 }
 
 .timeline-dot {
@@ -1225,6 +1229,7 @@ div > li {
 .timeline-content:hover {
   -webkit-filter: brightness(1.1);
           filter: brightness(1.1);
+  min-height: 16rem;
 }
 
 .timeline-content span:last-child {
@@ -1254,6 +1259,7 @@ div > li {
 }
 
 .timeline-content span {
+  margin-top: 1rem;
   display: block;
   color: #fff;
   font-size: 1.1rem;

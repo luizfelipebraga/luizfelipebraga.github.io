@@ -924,6 +924,10 @@ div > li {
     }
 }
 
+.projectsLanguages {
+    display: none;
+}
+
 .timeline-section {
     padding: 100px;
     > h1 {
@@ -950,14 +954,19 @@ div > li {
 }
 
 .timeline-item {
-    margin-bottom: 40px;
     width: 100%;
     position: relative;
 
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
 
     &:hover {
         transform: scale(1.1);
+
+        .projectsLanguages {
+            display: flex;
+            padding-top: 1rem;
+            gap: .3rem;
+        }
     }
 
     &:last-child {
@@ -971,11 +980,6 @@ div > li {
 
     &:nth-child(even) {
         padding-left: calc(50% + 30px);
-    }
-
-    details {
-        color: #fff;
-        margin-top: 1rem;
     }
 }
 
@@ -1003,6 +1007,7 @@ div > li {
 
     &:hover {
         filter: brightness(1.1);
+        min-height: 16rem;
     }
 
     span:last-child {
@@ -1028,6 +1033,7 @@ div > li {
     }
 
     span {
+        margin-top: 1rem;
         display: block;
         color: #fff;
         font-size: 1.1rem;
