@@ -23,9 +23,33 @@ details {
     font-family: "Inter", sans-serif;
 }
 
-section {
+//efeito paralax
+.paralax {
+    background-image: url("../images/star4.jpg");
+    min-height: 100%;
+    height: 100%;
+    position: relative;
+    /* opacity: 0.65; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    z-index: 3;
+}
+
+.container {
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.container section {
     display: flex;
     width: 100%;
+    scroll-snap-align: start;
 }
 
 section:first-child {
@@ -47,7 +71,7 @@ section:first-child {
 
 #projetos {
     scroll-snap-align: start;
-    padding: 100px;
+    padding: 80px 80px 100px 80px;
 }
 
 .timeline-section {
@@ -58,6 +82,11 @@ section:first-child {
         rgba(0, 0, 0, 0.541) 67%
     );
     flex-direction: column;
+
+    padding: 70px 80px 100px 0px;
+    > h1 {
+        color: #fff;
+    }
 }
 
 #formacao {
@@ -85,20 +114,6 @@ section:first-child {
     flex-direction: column;
     padding: 50px;
     background: linear-gradient(rgb(0, 0, 0) 1%, rgba(16, 17, 19, 0.877) 90%);
-}
-
-//efeito paralax
-.paralax {
-    background-image: url("../images/star4.jpg");
-    min-height: 100%;
-    position: relative;
-    /* opacity: 0.65; */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    z-index: 2;
 }
 
 .containerIntroduction {
@@ -140,6 +155,7 @@ section:first-child {
 
     h2 {
         color: #fff;
+        text-align: center;
     }
 
     span {
@@ -152,10 +168,6 @@ section:first-child {
     hr {
         margin-top: 0.2rem;
     }
-}
-
-.timeline-section .subtitle h1 {
-    color: #fff;
 }
 
 .name-box {
@@ -928,20 +940,13 @@ div > li {
     display: none;
 }
 
-.timeline-section {
-    padding: 100px;
-    > h1 {
-        color: #fff;
-    }
-}
-
 .timeline-items {
     max-width: 62.5rem;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
 
     &:before {
         content: "";

@@ -24,11 +24,34 @@ details {
   font-family: "Inter", sans-serif;
 }
 
-section {
+.paralax {
+  background-image: url("../images/star4.jpg");
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  /* opacity: 0.65; */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 3;
+}
+
+.container {
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+.container section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  scroll-snap-align: start;
 }
 
 section:first-child {
@@ -45,7 +68,7 @@ section:first-child {
 
 #projetos {
   scroll-snap-align: start;
-  padding: 100px;
+  padding: 80px 80px 100px 80px;
 }
 
 .timeline-section {
@@ -55,6 +78,11 @@ section:first-child {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 70px 80px 100px 0px;
+}
+
+.timeline-section > h1 {
+  color: #fff;
 }
 
 #formacao {
@@ -78,18 +106,6 @@ section:first-child {
   padding: 50px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, black), color-stop(90%, rgba(16, 17, 19, 0.877)));
   background: linear-gradient(black 1%, rgba(16, 17, 19, 0.877) 90%);
-}
-
-.paralax {
-  background-image: url("../images/star4.jpg");
-  min-height: 100%;
-  position: relative;
-  /* opacity: 0.65; */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 2;
 }
 
 .containerIntroduction {
@@ -161,6 +177,7 @@ section:first-child {
 
 .subtitle h2 {
   color: #fff;
+  text-align: center;
 }
 
 .subtitle span {
@@ -172,10 +189,6 @@ section:first-child {
 
 .subtitle hr {
   margin-top: 0.2rem;
-}
-
-.timeline-section .subtitle h1 {
-  color: #fff;
 }
 
 .name-box {
@@ -1137,14 +1150,6 @@ div > li {
   display: none;
 }
 
-.timeline-section {
-  padding: 100px;
-}
-
-.timeline-section > h1 {
-  color: #fff;
-}
-
 .timeline-items {
   max-width: 62.5rem;
   margin: auto;
@@ -1154,7 +1159,7 @@ div > li {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .timeline-items:before {
