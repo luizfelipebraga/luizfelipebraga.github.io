@@ -42,8 +42,6 @@ details {
   min-height: 100%;
   height: 100%;
   overflow-y: scroll;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
 }
 
 .container section {
@@ -51,7 +49,6 @@ details {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  scroll-snap-align: start;
 }
 
 section:first-child {
@@ -311,7 +308,7 @@ section:first-child {
 }
 
 .logo b span {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   -webkit-animation: blink linear infinite 2s;
           animation: blink linear infinite 2s;
 }
@@ -572,11 +569,11 @@ h2 {
 
 .box_cvbutton {
   display: block;
+  position: relative;
   text-align: center;
-  margin-top: 1rem;
-  padding-top: 6rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  top: 30%;
 }
 
 .btn {
@@ -590,6 +587,7 @@ h2 {
   border-radius: 5px;
   padding: 20px 35px;
   position: relative;
+  z-index: 1;
   border: 2px solid #f55f19;
 }
 
@@ -1152,6 +1150,7 @@ div > li {
 
 .timeline-items {
   max-width: 62.5rem;
+  min-height: 53.6rem;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1424,6 +1423,13 @@ a {
   }
   .containerIntroduction .logo b span {
     font-size: 3rem;
+  }
+  .box_cvbutton {
+    top: 40%;
+    gap: .5rem;
+  }
+  .box_cvbutton .btn {
+    font-size: 1rem;
   }
   .subtitle {
     text-align: center;
