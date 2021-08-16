@@ -1176,7 +1176,7 @@ div > li {
   scroll-behavior: smooth;
 }
 
-#items-wrapper #items a {
+#items-wrapper #items .item {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
@@ -1189,30 +1189,30 @@ div > li {
   transition: filter 0.2s, -webkit-filter 0.2s;
 }
 
-#items-wrapper #items a:hover {
+#items-wrapper #items .item:hover {
   -webkit-filter: brightness(1.2);
           filter: brightness(1.2);
 }
 
-#items-wrapper #items a .ProjectsContent {
+#items-wrapper #items .item .ProjectsContent {
   width: 100%;
   height: 100%;
   padding: 100px;
 }
 
-#items-wrapper #items a .ProjectsContent.letmeask {
+#items-wrapper #items .item .ProjectsContent.letmeask {
   background: #9d7dfe;
 }
 
-#items-wrapper #items a .ProjectsContent.senai {
+#items-wrapper #items .item .ProjectsContent.senai {
   background: rgba(26, 27, 31, 0.644);
 }
 
-#items-wrapper #items a .ProjectsContent.spring {
+#items-wrapper #items .item .ProjectsContent.spring {
   background: #a7683bfa;
 }
 
-#items-wrapper #items a .ProjectsContent .LetMeAskContent {
+#items-wrapper #items .item .ProjectsContent .LetMeAskContent {
   max-width: 1200px;
   height: 100%;
   display: -webkit-box;
@@ -1232,7 +1232,7 @@ div > li {
           align-items: center;
 }
 
-#items-wrapper #items a .ProjectsContent .SenaiVagasContent {
+#items-wrapper #items .item .ProjectsContent .SenaiVagasContent {
   max-width: 1200px;
   height: 100%;
   display: -webkit-box;
@@ -1250,7 +1250,7 @@ div > li {
           align-items: center;
 }
 
-#items-wrapper #items a .ProjectsContent .SpringBankContent {
+#items-wrapper #items .item .ProjectsContent .SpringBankContent {
   max-width: 1200px;
   height: 100%;
   display: -webkit-box;
@@ -1268,22 +1268,22 @@ div > li {
           align-items: center;
 }
 
-#items-wrapper #items a .ProjectsContent p,
-#items-wrapper #items a .ProjectsContent h1 {
+#items-wrapper #items .item .ProjectsContent p,
+#items-wrapper #items .item .ProjectsContent h1 {
   color: #fff;
 }
 
-#items-wrapper #items a .ProjectsContent h1 {
+#items-wrapper #items .item .ProjectsContent h1 {
   font-size: 3rem;
 }
 
-#items-wrapper #items a .ProjectsContent p {
+#items-wrapper #items .item .ProjectsContent p {
   height: 100%;
   max-width: 600px;
   max-height: 100px;
 }
 
-#items-wrapper #items a img {
+#items-wrapper #items .item img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
