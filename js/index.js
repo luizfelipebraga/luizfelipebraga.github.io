@@ -6,8 +6,6 @@ const scrollWheel = (event) => {
         event.target.scrollBy(-300, 0)
       }
   }
-
-  scrollWheel()
   
   // document.querySelector("#items")
   //   .addEventListener("wheel", scrollWheel)
