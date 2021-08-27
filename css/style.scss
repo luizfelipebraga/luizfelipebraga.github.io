@@ -431,7 +431,8 @@ h2 {
     display: block;
     text-align: center;
     flex-wrap: wrap;
-    margin-top: 3rem;
+    position: relative;
+    top: 15%;
 }
 
 .btn {
@@ -1239,7 +1240,7 @@ a {
     }
 
     .box_cvbutton {
-        top: 40%;
+        top: 20%;
         gap: 0.5rem;
 
         .btn {
