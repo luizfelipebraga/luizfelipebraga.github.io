@@ -11,6 +11,11 @@ html {
     overflow: hidden;
 }
 
+hr {
+    width: 100%;
+    border-color: #1b1b1b;
+}
+
 h1,
 h2,
 h3,
@@ -47,31 +52,25 @@ img {
 }
 
 .container {
-    position: relative;
     min-height: 100%;
     height: 100%;
+    position: relative;
     overflow-y: scroll;
     // scroll-snap-type: y mandatory;
 }
 
 .container section {
     display: flex;
-    gap: 3rem;
+    justify-content: center;
+    gap: 4rem;
     align-items: center;
     width: 100%;
     // scroll-snap-align: center;
 }
 
 section:first-child {
-    width: 100%;
-    height: 70vh;
-    background: linear-gradient(
-        rgba(16, 17, 19, 0.8) 5%,
-        rgba(16, 17, 19, 0.9) 15%,
-        rgb(16, 17, 19) 30%,
-        rgb(16, 17, 19) 67%,
-        rgba(16, 17, 19, 1) 98%
-    );
+    position: relative;
+    background: #0d0d0e;
 }
 
 #introduction footer > a > img {
@@ -79,22 +78,12 @@ section:first-child {
     width: 3rem;
 }
 
-#projetos {
-    scroll-snap-align: start;
-    padding: 80px 80px 100px 80px;
-}
-
 .projects {
-    background: linear-gradient(
-        rgba(16, 17, 19, 0.8) 5%,
-        rgb(16, 17, 19) 20%,
-        rgb(16, 17, 19) 92%,
-        rgba(16, 17, 19, 0.888) 93%
-    );
+    background: #121214;
 
     min-height: 70vh;
 
-    padding: 50px 200px;
+    padding: 30px 150px;
     > h1 {
         color: #fff;
     }
@@ -102,35 +91,25 @@ section:first-child {
 
 #formacao {
     padding: 150px;
-    background: linear-gradient(
-        rgba(16, 17, 19, 0.8) 5%,
-        rgb(16, 17, 19) 25%,
-        rgb(16, 17, 19) 37%,
-        rgb(16, 17, 19) 67%
-    );
+    background: #121214;
 }
 
 #skills {
     padding: 150px;
     color: #fff;
-    background: linear-gradient(
-        rgba(16, 17, 19, 0.8) 5%,
-        rgb(16, 17, 19) 25%,
-        rgb(16, 17, 19) 37%,
-        rgb(16, 17, 19) 67%
-    );
+    background: #0d0d0e;
 }
 
 #myself {
-    flex-direction: column;
-    padding: 50px;
-    background: linear-gradient(rgb(0, 0, 0) 1%, rgba(16, 17, 19, 0.877) 90%);
+    padding: 150px 100px;
+    background: #0d0d0e;
 }
 
 .containerIntroduction {
     display: flex;
     flex-direction: column;
-    height: 80vh;
+    min-height: 75vh;
+    height: 75vh;
     width: 100%;
 
     margin-bottom: 1rem;
@@ -143,7 +122,6 @@ section:first-child {
     flex-direction: column;
     align-items: center;
     color: #fff;
-    position: absolute;
     width: 100%;
 }
 
@@ -151,9 +129,8 @@ section:first-child {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
     width: 100%;
-    margin-top: 15rem;
+    margin-top: 2rem;
 }
 
 .subtitle {
@@ -162,15 +139,21 @@ section:first-child {
     justify-content: center;
     align-items: center;
 
-    margin-bottom: 3rem;
-
     h2 {
-        color: #fff;
+        background-repeat: repeat;
+        background-size: 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        background-image: linear-gradient(91.18deg, #fff 32.63%, #f1b549bf 62.22%);
         text-align: center;
+        text-transform: uppercase;
     }
 
     span {
-        color: #f1b549bf;
+        color: rgb(173, 173, 173);
         margin-top: 0.5rem;
         font-size: 1.1rem;
         text-align: center;
@@ -355,9 +338,9 @@ h1 {
     justify-content: center;
 }
 
-hr {
+.subtitle hr {
     border: 1px solid rgb(214, 214, 214);
-    width: 70%;
+    width: 15rem;
     box-shadow: 2px 2px 3px rgba(235, 235, 235, 0.2);
 }
 
@@ -446,11 +429,9 @@ h2 {
 
 .box_cvbutton {
     display: block;
-    position: relative;
     text-align: center;
     flex-wrap: wrap;
-
-    top: 30%;
+    margin-top: 3rem;
 }
 
 .btn {
@@ -697,10 +678,8 @@ div > li {
 
 .container-skills {
     display: flex;
-    margin: 0 auto;
     flex-wrap: wrap;
     gap: 2rem;
-    margin: 0 auto;
     width: 100%;
     max-width: 1200px;
     padding: 1.5rem 0;
@@ -965,6 +944,7 @@ div > li {
             flex: none;
 
             width: 80%;
+            border-radius: 100px;
             height: 400px;
 
             scroll-snap-align: start;
@@ -980,13 +960,14 @@ div > li {
                 height: 100%;
 
                 padding: 100px;
+                border-radius: 50px 50px 0 0;
 
                 &.letmeask {
                     background: #9d7dfe;
                 }
 
                 &.senai {
-                    background: rgba(26, 27, 31, 0.644);
+                    background: rgb(154, 53, 53);
                 }
 
                 &.spring {
@@ -1067,19 +1048,44 @@ a {
     text-decoration: none;
 }
 
+.main-contato {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+
+    > img {
+        &:first-child {
+            height: 14rem;
+            border-radius: 50%;
+        }
+    }
+}
+
 .containerInfos {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
-    gap: 5rem;
-
-    padding-bottom: 1.3rem;
 
     span {
-        color: #757575;
+        color: #a2a2a7;
         font-size: 0.9rem;
         padding: 0rem 1rem;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 36px;
+
+        &:first-child {
+            color: #e1e1e6;
+            font-size: 20px;
+            font-weight: 800;
+        }
     }
 
     img {
@@ -1104,6 +1110,11 @@ a {
         display: flex;
         align-items: center;
         margin-top: 1rem;
+        transition: filter 0.2s ease;
+
+        &:hover {
+            filter: brightness(0.7);
+        }
     }
 }
 
