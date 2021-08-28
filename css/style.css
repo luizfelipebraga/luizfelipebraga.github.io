@@ -197,7 +197,7 @@ section:first-child {
 }
 
 .containerIntroduction > img {
-  height: 18rem;
+  height: 14rem;
 }
 
 .containerIntroduction > img:hover {
@@ -397,7 +397,7 @@ section:first-child {
 .logo b {
   font: 600 1.3rem "Inter", sans-serif;
   color: #fee;
-  text-shadow: 0 2px 90px, 0 0 2px, 0 0 100px #ffffff, 0 0 0.5em #ffffff, 0 0 0.1em #ffffff, 0 3px 2px #000;
+  text-shadow: 0 2px 90px, 0 0 2px, 0 0 100px #3f3d56, 0 0 0.5em #ffffff, 0 0 0.1em #ffffff, 0 3px 2px #000;
 }
 
 .logo b span {
