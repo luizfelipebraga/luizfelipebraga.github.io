@@ -56,7 +56,7 @@ img {
     height: 100%;
     position: relative;
     overflow-y: scroll;
-    // scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
 }
 
 .container section {
@@ -66,12 +66,12 @@ img {
     gap: 4rem;
     align-items: center;
     width: 100%;
-    // scroll-snap-align: center;
+    scroll-snap-align: center;
 }
 
 section:first-child {
     background: #0d0d0e;
-    min-height: 75vh;
+    min-height: 90vh;
 }
 
 #introduction footer > a > img {
@@ -91,7 +91,7 @@ section:first-child {
 }
 
 #formacao {
-    padding: 150px;
+    padding: 50px 150px 150px 150px;
     background: #121214;
 }
 
@@ -178,7 +178,10 @@ section:first-child {
     margin-bottom: 4rem;
 
     > img {
-        height: 10rem;
+        height: 18rem;
+        &:hover {
+            filter: none;
+        }
     }
 
     .containerTitle {
@@ -318,7 +321,7 @@ section:first-child {
 .logo b {
     font: 600 1.3rem "Inter", sans-serif;
     color: #fee;
-    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #f1610e, 0 0 0.5em #f1610e, 0 0 0.1em #f1610e, 0 10px 3px #000;
+    text-shadow: 0 2px 90px, 0 0 2px, 0 0 100px #ffffff, 0 0 0.5em #ffffff, 0 0 0.1em #ffffff, 0 3px 2px #000;
 }
 .logo b span {
     font-size: 3.5rem;
@@ -1211,6 +1214,10 @@ a {
 @media (max-width: 1600px) {
     html {
         font-size: 90.75%;
+    }
+
+    .container  {
+        scroll-snap-type: none;
     }
 
     section:first-child {
