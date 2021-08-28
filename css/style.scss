@@ -1023,6 +1023,9 @@ div > li {
 
     img {
         height: 20rem;
+        &:hover {
+            filter: none;
+        }
     }
 }
 
@@ -1159,6 +1162,9 @@ a {
 
     .profile-svg {
         height: 18rem;
+        &:hover {
+            filter: none;
+        }
     }
 
     .github-pic {
@@ -1303,6 +1309,14 @@ a {
         #items-wrapper {
             width: 75vw;
         }
+
+        #items-wrapper #items .item .ProjectsContent {
+            padding: 100px 10px;
+        }
+
+        #items-wrapper #items .item .ProjectsContent p {
+            font-size: 1.3rem;
+        }
     }
 }
 
@@ -1343,6 +1357,10 @@ a {
         }
     }
 
+    #items-wrapper {
+        width: 85vw;
+    }
+
     #items-wrapper #items .item .ProjectsContent {
         padding: 40px 20px 170px 20px;
 
@@ -1351,7 +1369,8 @@ a {
         }
 
         p {
-            font-size: 1rem;
+            overflow: hidden;
+            font-size: 1.3rem;
         }
     }
 

@@ -1278,6 +1278,11 @@ div > li {
   height: 20rem;
 }
 
+.container-project img:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
 #items-wrapper {
   width: 50vw;
 }
@@ -1446,6 +1451,11 @@ a {
   height: 18rem;
 }
 
+.main-contato .profile-svg:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
 .main-contato .github-pic {
   height: 15rem;
   border-radius: 50%;
@@ -1599,6 +1609,12 @@ a {
   .container-project #items-wrapper {
     width: 75vw;
   }
+  .container-project #items-wrapper #items .item .ProjectsContent {
+    padding: 100px 10px;
+  }
+  .container-project #items-wrapper #items .item .ProjectsContent p {
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1633,6 +1649,9 @@ a {
   .containerIntroduction .logo b span {
     font-size: 3rem;
   }
+  #items-wrapper {
+    width: 85vw;
+  }
   #items-wrapper #items .item .ProjectsContent {
     padding: 40px 20px 170px 20px;
   }
@@ -1640,7 +1659,8 @@ a {
     font-size: 2rem;
   }
   #items-wrapper #items .item .ProjectsContent p {
-    font-size: 1rem;
+    overflow: hidden;
+    font-size: 1.3rem;
   }
   .box_cvbutton {
     top: 20%;
