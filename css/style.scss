@@ -71,6 +71,7 @@ img {
 
 section:first-child {
     background: #0d0d0e;
+    min-height: 75vh;
 }
 
 #introduction footer > a > img {
@@ -105,7 +106,7 @@ section:first-child {
     background: #0d0d0e;
 }
 
-//curved wave 
+//curved wave
 
 .wave {
     position: absolute;
@@ -115,46 +116,68 @@ section:first-child {
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-  }
+}
 
-  .wave svg {
+.wave svg {
     position: relative;
     display: block;
     width: calc(166% + 1.3px);
     height: 152px;
     transform: rotateY(180deg);
-  }
+}
 
-  .wave .shape-fill {
-    fill: #121214;
-  }
+.wave .shape-fill {
+    fill: #282848;
+}
 
-  /* SVG background image via https://haikei.app/ */
+.wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
 
-  .spacer {
+.wave-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(168% + 1.3px);
+    height: 161px;
+    transform: rotateY(180deg);
+}
+
+.wave-bottom .shape-fill {
+    fill: #3f3d56;
+}
+
+/* SVG background image via https://haikei.app/ */
+
+.spacer {
     aspect-ratio: 960/300;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-  }
+}
 
-  .layer1 {
-    background-image: url('../svgs/layer1.svg');
-  }
+.layer1 {
+    background-image: url("../svgs/layer1.svg");
+}
 
 .containerIntroduction {
     display: flex;
-    min-height: 75vh;
-    height: 80vh;
+    flex-wrap: wrap;
+    position: inherit;
+    height: 100%;
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
     padding: 100px;
+    margin-bottom: 4rem;
 
-    margin-bottom: 1rem;
-
-    >img {
+    > img {
         height: 10rem;
     }
 
@@ -194,7 +217,7 @@ section:first-child {
         -webkit-text-fill-color: transparent;
         -moz-background-clip: text;
         -moz-text-fill-color: transparent;
-        background-image: linear-gradient(91.18deg, #fff 32.63%, #ff9735dc 62.22%);
+        background-image: linear-gradient(91.18deg, #fff 32.63%, #75709e 62.22%);
         text-align: center;
         text-transform: uppercase;
     }
@@ -361,7 +384,7 @@ section:first-child {
 
 .name-box > span:first-child {
     font-size: 1.5rem;
-    color: #ffa500;
+    color: #d28800;
 }
 
 .sub-name {
@@ -479,7 +502,7 @@ h2 {
     text-align: center;
     flex-wrap: wrap;
     position: relative;
-    top: 15%;
+    margin-top: 3rem;
 }
 
 .btn {
@@ -492,6 +515,7 @@ h2 {
     overflow: hidden;
     font-weight: bold;
     color: #fff;
+    background-image: linear-gradient(225deg, #282848, #3f3d56);
     border-radius: 25px;
 
     padding: 16px 35px;
@@ -499,22 +523,26 @@ h2 {
     position: relative;
 
     z-index: 1;
+    transition: filter 0.2s ease;
 
-    border: 2px solid #f55f19;
+    &:hover {
+        filter: brightness(0.8);
+    }
+
 
     &:before {
         content: "";
         position: absolute;
         top: 50%;
         left: 50%;
-        border-radius: 23px;
+        border-radius: 24px;
 
         transform: translate(-50%, -50%);
 
         width: 100%;
         height: 100%;
 
-        background-image: linear-gradient(225deg, #f55f19, #ecb849);
+        background-image: linear-gradient(225deg, #afafaf, #b3b3b3);
         z-index: -1;
         transition: 0.7s ease;
     }
@@ -1187,7 +1215,7 @@ a {
 
     section:first-child {
         width: 100%;
-        height: 70vh;
+        height: 90vh;
     }
 
     #formacao,

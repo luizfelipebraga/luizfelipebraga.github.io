@@ -79,6 +79,7 @@ img:hover {
 
 section:first-child {
   background: #0d0d0e;
+  min-height: 75vh;
 }
 
 #introduction footer > a > img {
@@ -133,7 +134,31 @@ section:first-child {
 }
 
 .wave .shape-fill {
-  fill: #121214;
+  fill: #282848;
+}
+
+.wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.wave-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(168% + 1.3px);
+  height: 161px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.wave-bottom .shape-fill {
+  fill: #3f3d56;
 }
 
 /* SVG background image via https://haikei.app/ */
@@ -153,8 +178,10 @@ section:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 75vh;
-  height: 80vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: inherit;
+  height: 100%;
   width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -163,7 +190,7 @@ section:first-child {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   padding: 100px;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
 }
 
 .containerIntroduction > img {
@@ -230,7 +257,7 @@ section:first-child {
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-  background-image: linear-gradient(91.18deg, #fff 32.63%, #ff9735dc 62.22%);
+  background-image: linear-gradient(91.18deg, #fff 32.63%, #75709e 62.22%);
   text-align: center;
   text-transform: uppercase;
 }
@@ -485,7 +512,7 @@ section:first-child {
 
 .name-box > span:first-child {
   font-size: 1.5rem;
-  color: #ffa500;
+  color: #d28800;
 }
 
 .sub-name {
@@ -630,7 +657,7 @@ h2 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   position: relative;
-  top: 15%;
+  margin-top: 3rem;
 }
 
 .btn {
@@ -643,11 +670,20 @@ h2 {
   overflow: hidden;
   font-weight: bold;
   color: #fff;
+  background-image: linear-gradient(225deg, #282848, #3f3d56);
   border-radius: 25px;
   padding: 16px 35px;
   position: relative;
   z-index: 1;
-  border: 2px solid #f55f19;
+  -webkit-transition: -webkit-filter 0.2s ease;
+  transition: -webkit-filter 0.2s ease;
+  transition: filter 0.2s ease;
+  transition: filter 0.2s ease, -webkit-filter 0.2s ease;
+}
+
+.btn:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
 }
 
 .btn:before {
@@ -655,12 +691,12 @@ h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  border-radius: 23px;
+  border-radius: 24px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(225deg, #f55f19, #ecb849);
+  background-image: linear-gradient(225deg, #afafaf, #b3b3b3);
   z-index: -1;
   -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
@@ -1467,7 +1503,7 @@ a {
   }
   section:first-child {
     width: 100%;
-    height: 70vh;
+    height: 90vh;
   }
   #formacao,
   #skills,
