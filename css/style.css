@@ -729,6 +729,15 @@ h2 {
   margin-bottom: 1rem;
 }
 
+.main-content-formacao {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 900px;
+}
+
 .Container-Card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -742,7 +751,6 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1rem;
-  max-width: 900px;
 }
 
 .Container-Card > img {
@@ -754,8 +762,8 @@ h2 {
   display: grid;
   -ms-grid-columns: 300px;
       grid-template-columns: 300px;
-  -ms-grid-rows: 210px 210px 80px;
-      grid-template-rows: 210px 210px 80px;
+  -ms-grid-rows: 160px 190px 60px;
+      grid-template-rows: 160px 190px 60px;
       grid-template-areas: "image" "text" "stats";
   border-radius: 18px;
   background: white;
@@ -1648,6 +1656,9 @@ a {
   }
   .containerIntroduction .logo b span {
     font-size: 3rem;
+  }
+  .main-content-formacao > img {
+    display: none;
   }
   #items-wrapper {
     width: 85vw;

@@ -571,13 +571,18 @@ h2 {
     margin-bottom: 1rem;
 }
 
+.main-content-formacao {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+}
+
 .Container-Card {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    max-width: 900px;
 
     > img {
         height: 27em;
@@ -587,7 +592,7 @@ h2 {
 .card {
     display: grid;
     grid-template-columns: 300px;
-    grid-template-rows: 210px 210px 80px;
+    grid-template-rows: 160px 190px 60px;
     grid-template-areas: "image" "text" "stats";
     border-radius: 18px;
     background: white;
@@ -1354,6 +1359,12 @@ a {
 
         .logo b span {
             font-size: 3rem;
+        }
+    }
+
+    .main-content-formacao {
+        >img {
+            display: none;
         }
     }
 
