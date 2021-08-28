@@ -60,8 +60,8 @@ img:hover {
   height: 100%;
   position: relative;
   overflow-y: scroll;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
 }
 
 .container section {
@@ -91,9 +91,13 @@ section:first-child {
 }
 
 .projects {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: #121214;
   min-height: 70vh;
-  padding: 30px 150px;
+  padding: 150px 200px;
 }
 
 .projects > h1 {
@@ -101,7 +105,7 @@ section:first-child {
 }
 
 #formacao {
-  padding: 50px 150px 150px 150px;
+  padding: 45px 150px 150px 150px;
   background: #121214;
 }
 
@@ -731,9 +735,18 @@ h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 1rem;
+  max-width: 900px;
+}
+
+.Container-Card > img {
+  height: 27em;
 }
 
 .card {
@@ -1246,8 +1259,27 @@ div > li {
   }
 }
 
+.container-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container-project img {
+  height: 20rem;
+}
+
 #items-wrapper {
-  width: 60vw;
+  width: 50vw;
 }
 
 #items-wrapper #items {
@@ -1410,8 +1442,12 @@ a {
   position: relative;
 }
 
-.main-contato > img:first-child {
-  height: 14rem;
+.main-contato .profile-svg {
+  height: 18rem;
+}
+
+.main-contato .github-pic {
+  height: 15rem;
   border-radius: 50%;
 }
 
@@ -1553,6 +1589,15 @@ a {
   }
   .skills-bar {
     width: 28rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container-project img {
+    display: none;
+  }
+  .container-project #items-wrapper {
+    width: 75vw;
   }
 }
 
