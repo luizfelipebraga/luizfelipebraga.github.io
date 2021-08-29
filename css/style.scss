@@ -574,7 +574,7 @@ h2 {
 .main-content-formacao {
     display: flex;
     flex-wrap: wrap;
-    max-width: 900px;
+    justify-content: center;
 }
 
 .Container-Card {
@@ -582,6 +582,7 @@ h2 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    max-width: 1200px;
     gap: 1rem;
 
     > img {
