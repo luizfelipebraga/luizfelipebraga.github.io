@@ -72,7 +72,7 @@ img {
 section:first-child {
     background: #0d0d0e;
     background-image: linear-gradient(91.18deg, #0d0d0e 32.63%, #141416 62.22%);
-    min-height: 90vh;
+    min-height: 80vh;
 }
 
 #introduction footer > a > img {
@@ -85,6 +85,7 @@ section:first-child {
     background: #121214;
 
     min-height: 70vh;
+    height: 75vh;
 
     padding: 150px 200px;
     > h1 {
@@ -106,7 +107,7 @@ section:first-child {
 }
 
 #myself {
-    padding: 150px 100px;
+    padding: 150px 50px;
     background: #0d0d0e;
 }
 
@@ -174,6 +175,7 @@ section:first-child {
     display: flex;
     flex-wrap: wrap;
     position: inherit;
+    min-height: 700px;
     height: 100%;
     width: 100%;
     align-items: center;
@@ -252,16 +254,6 @@ section:first-child {
     color: #fff;
     font-size: 3rem;
     letter-spacing: 0.5rem;
-}
-
-.name {
-    width: 24em;
-    margin: 0 auto;
-    border-right: 2px solid rgba(255, 255, 255, 0.75);
-    font-size: 180%;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .div1 {
