@@ -1,1 +1,21 @@
-<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="900" height="600" fill="#121214"></rect><defs><linearGradient id="grad1_0" x1="33.3%" y1="0%" x2="100%" y2="100%"><stop offset="20%" stop-color="#121214" stop-opacity="1"></stop><stop offset="80%" stop-color="#121214" stop-opacity="1"></stop></linearGradient></defs><defs><linearGradient id="grad2_0" x1="0%" y1="0%" x2="66.7%" y2="100%"><stop offset="20%" stop-color="#121214" stop-opacity="1"></stop><stop offset="80%" stop-color="#121214" stop-opacity="1"></stop></linearGradient></defs><g transform="translate(900, 0)"><path d="M0 486.7C-54.8 460.6 -109.5 434.5 -172.2 415.7C-234.9 397 -305.4 385.6 -344.2 344.2C-382.9 302.8 -389.9 231.5 -408.4 169.1C-426.8 106.8 -456.8 53.4 -486.7 0L0 0Z" fill="#3f3d56"></path></g><g transform="translate(0, 600)"><path d="M0 -486.7C73.1 -489 146.2 -491.2 186.3 -449.7C226.3 -408.2 233.4 -323.1 276.5 -276.5C319.6 -229.9 398.7 -221.8 439.8 -182.2C480.8 -142.5 483.8 -71.3 486.7 0L0 0Z" fill="#3f3d56"></path></g></svg>
+<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+    <rect x="0" y="0" width="900" height="600" fill="#121214"></rect>
+    <defs>
+        <linearGradient id="grad1_0" x1="33.3%" y1="0%" x2="100%" y2="100%">
+            <stop offset="20%" stop-color="#121214" stop-opacity="1"></stop>
+            <stop offset="80%" stop-color="#121214" stop-opacity="1"></stop>
+        </linearGradient>
+    </defs>
+    <defs>
+        <linearGradient id="grad2_0" x1="0%" y1="0%" x2="66.7%" y2="100%">
+            <stop offset="20%" stop-color="#121214" stop-opacity="1"></stop>
+            <stop offset="80%" stop-color="#121214" stop-opacity="1"></stop>
+        </linearGradient>
+    </defs>
+    <g transform="translate(900, 0)">
+        <path d="M0 486.7C-54.8 460.6 -109.5 434.5 -172.2 415.7C-234.9 397 -305.4 385.6 -344.2 344.2C-382.9 302.8 -389.9 231.5 -408.4 169.1C-426.8 106.8 -456.8 53.4 -486.7 0L0 0Z" fill="#3f3d56"></path>
+    </g>
+    <g transform="translate(0, 600)">
+        <path d="M0 -486.7C73.1 -489 146.2 -491.2 186.3 -449.7C226.3 -408.2 233.4 -323.1 276.5 -276.5C319.6 -229.9 398.7 -221.8 439.8 -182.2C480.8 -142.5 483.8 -71.3 486.7 0L0 0Z" fill="#3f3d56"></path>
+    </g>
+</svg>
