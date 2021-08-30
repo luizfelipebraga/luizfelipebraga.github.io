@@ -68,6 +68,11 @@ section:first-child {
 #introduction footer > a > img {
     margin-left: 10px;
     width: 3rem;
+    transform: filter 0.2s;
+
+    &:hover {
+        filter: brightness(1.5);
+    }
 }
 
 .projects {
@@ -149,7 +154,7 @@ section:first-child {
 .wave-bottom .shape-fill {
     fill: url(#GradBottom);
 }
-//fim curved 
+//fim curved
 
 /* SVG background image via https://haikei.app/ */
 
@@ -574,7 +579,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
 
-    >img {
+    > img {
         &:hover {
             filter: none;
         }
@@ -597,7 +602,7 @@ h2 {
 .card {
     display: grid;
     grid-template-columns: 300px;
-    grid-template-rows: 160px 190px 60px;
+    grid-template-rows: 160px 240px 60px;
     grid-template-areas: "image" "text" "stats";
     border-radius: 18px;
     background: white;
@@ -664,8 +669,8 @@ h2 {
 
         p {
             color: rgb(71, 71, 71);
-            margin-top: 0.5rem;
-            font-size: 1rem;
+            padding: 1.3rem 1rem;
+            font-size: 0.95rem;
             font-weight: 300;
             text-align: left;
             width: 100%;
@@ -1096,6 +1101,10 @@ div > li {
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
+
+                    strong {
+                        color: #000;
+                    }
                 }
 
                 .SenaiVagasContent {
@@ -1106,6 +1115,10 @@ div > li {
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
+
+                    strong {
+                        color: #000;
+                    }
                 }
 
                 .SpringBankContent {
@@ -1116,6 +1129,10 @@ div > li {
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: center;
+
+                    strong {
+                        color: #000;
+                    }
                 }
 
                 p,
@@ -1208,6 +1225,10 @@ a {
 
     img {
         width: 2.5rem;
+        transition: filter 0.2s ease;
+        &:hover {
+            filter: brightness(1.5);
+        }
     }
 
     .infosAboutMe {
@@ -1231,7 +1252,7 @@ a {
         transition: filter 0.2s ease;
 
         &:hover {
-            filter: brightness(0.7);
+            filter: brightness(1.5);
         }
     }
 }
@@ -1311,17 +1332,16 @@ a {
     }
 }
 
-@media(max-width: 1280px) {
-
+@media (max-width: 1280px) {
     .containerIntroduction {
-        >img {
+        > img {
             display: none;
         }
     }
 
     .container-project {
         img {
-            display:none;
+            display: none;
         }
 
         #items-wrapper {
@@ -1377,7 +1397,7 @@ a {
     }
 
     .main-content-formacao {
-        >img {
+        > img {
             display: none;
         }
     }
@@ -1460,7 +1480,8 @@ a {
         font-size: 1.3rem;
     }
 
-    .container .containerIntroduction, .container-skills {
+    .container .containerIntroduction,
+    .container-skills {
         padding: 10px;
     }
 

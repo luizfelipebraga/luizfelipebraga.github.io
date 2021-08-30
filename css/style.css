@@ -77,6 +77,13 @@ section:first-child {
 #introduction footer > a > img {
   margin-left: 10px;
   width: 3rem;
+  -webkit-transform: filter 0.2s;
+          transform: filter 0.2s;
+}
+
+#introduction footer > a > img:hover {
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
 }
 
 .projects {
@@ -765,8 +772,8 @@ h2 {
   display: grid;
   -ms-grid-columns: 300px;
       grid-template-columns: 300px;
-  -ms-grid-rows: 160px 190px 60px;
-      grid-template-rows: 160px 190px 60px;
+  -ms-grid-rows: 160px 240px 60px;
+      grid-template-rows: 160px 240px 60px;
       grid-template-areas: "image" "text" "stats";
   border-radius: 18px;
   background: white;
@@ -848,8 +855,8 @@ h2 {
 
 .card .card-text p {
   color: #474747;
-  margin-top: 0.5rem;
-  font-size: 1rem;
+  padding: 1.3rem 1rem;
+  font-size: 0.95rem;
   font-weight: 300;
   text-align: left;
   width: 100%;
@@ -1369,6 +1376,10 @@ div > li {
           align-items: center;
 }
 
+#items-wrapper #items .item .ProjectsContent .LetMeAskContent strong {
+  color: #000;
+}
+
 #items-wrapper #items .item .ProjectsContent .SenaiVagasContent {
   max-width: 1200px;
   height: 100%;
@@ -1387,6 +1398,10 @@ div > li {
           align-items: center;
 }
 
+#items-wrapper #items .item .ProjectsContent .SenaiVagasContent strong {
+  color: #000;
+}
+
 #items-wrapper #items .item .ProjectsContent .SpringBankContent {
   max-width: 1200px;
   height: 100%;
@@ -1403,6 +1418,10 @@ div > li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#items-wrapper #items .item .ProjectsContent .SpringBankContent strong {
+  color: #000;
 }
 
 #items-wrapper #items .item .ProjectsContent p,
@@ -1506,6 +1525,15 @@ a {
 
 .containerInfos img {
   width: 2.5rem;
+  -webkit-transition: -webkit-filter 0.2s ease;
+  transition: -webkit-filter 0.2s ease;
+  transition: filter 0.2s ease;
+  transition: filter 0.2s ease, -webkit-filter 0.2s ease;
+}
+
+.containerInfos img:hover {
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
 }
 
 .containerInfos .infosAboutMe {
@@ -1546,8 +1574,8 @@ a {
 .containerInfos .infoEmail:hover,
 .containerInfos .infoLinkedin:hover,
 .containerInfos .infoGithub:hover {
-  -webkit-filter: brightness(0.7);
-          filter: brightness(0.7);
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
 }
 
 /* responsive */
@@ -1732,7 +1760,8 @@ a {
     padding: 0 10px;
     font-size: 1.3rem;
   }
-  .container .containerIntroduction, .container-skills {
+  .container .containerIntroduction,
+  .container-skills {
     padding: 10px;
   }
   .projects {
