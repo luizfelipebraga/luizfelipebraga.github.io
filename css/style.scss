@@ -99,6 +99,7 @@ section:first-child {
 
 #skills {
     padding: 150px;
+    justify-content: space-between;
     color: #fff;
     background: #0d0d0e;
 }
@@ -389,7 +390,16 @@ section:first-child {
 
 .name-box > span:first-child {
     font-size: 1.5rem;
-    color: #d28800;
+    background-repeat: repeat;
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    background-image: linear-gradient(91.18deg, #fff 32.63%, #75709e 62.22%);
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .sub-name {
@@ -829,7 +839,7 @@ div > li {
     span {
         height: 100%;
         width: 80%;
-        background: #f55f19;
+        background: #6b69af;
         border-radius: 10px;
         position: absolute;
         transform: scaleX(0);
@@ -1196,19 +1206,19 @@ a {
         color: #a2a2a7;
         font-size: 0.9rem;
         padding: 0rem 1rem;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
         line-height: 36px;
 
         &:first-child {
             color: #e1e1e6;
-            font-size: 20px;
+            font-size: 25px;
             font-weight: 800;
         }
     }
 
     img {
-        width: 2rem;
+        width: 2.5rem;
     }
 
     .infosAboutMe {
@@ -1313,6 +1323,13 @@ a {
 }
 
 @media(max-width: 1280px) {
+
+    .containerIntroduction {
+        >img {
+            display: none;
+        }
+    }
+
     .container-project {
         img {
             display:none;
@@ -1437,6 +1454,10 @@ a {
     }
     .timeline-dot {
         left: 0;
+    }
+
+    .profile-svg {
+        display: none;
     }
 }
 
