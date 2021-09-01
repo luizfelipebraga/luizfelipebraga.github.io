@@ -47,8 +47,6 @@ img:hover {
   height: 100%;
   position: relative;
   overflow-y: scroll;
-  -ms-scroll-snap-type: y proximity;
-      scroll-snap-type: y proximity;
 }
 
 .container section {
@@ -64,7 +62,6 @@ img:hover {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  scroll-snap-align: center;
 }
 
 #introduction {
@@ -95,7 +92,7 @@ img:hover {
   background: #121214;
   min-height: 75vh;
   width: 100%;
-  padding: 100px 200px;
+  padding: 100px 150px;
 }
 
 .projects > h1 {
@@ -1316,27 +1313,57 @@ div > li {
 
 .project-maincontent .project-items .project-content {
   color: #fff;
-  padding: 1rem 1rem;
+  padding: 2rem;
   border-radius: 25px;
   margin-bottom: 1rem;
   min-height: 200px;
+  height: 100%;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 2rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: background-color 1s ease-out;
-  transition: background-color 1s ease-out;
+  -webkit-transition: -webkit-filter 0.5s ease-out;
+  transition: -webkit-filter 0.5s ease-out;
+  transition: filter 0.5s ease-out;
+  transition: filter 0.5s ease-out, -webkit-filter 0.5s ease-out;
+}
+
+.project-maincontent .project-items .project-content > img {
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.project-maincontent .project-items .project-content > img:hover {
+  -webkit-filter: none;
+          filter: none;
+}
+
+.project-maincontent .project-items .project-content:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 24px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.815);
+  z-index: -1;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
 }
 
 .project-maincontent .project-items .project-content > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1344,23 +1371,39 @@ div > li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 200px;
+  min-height: 230px;
 }
 
 .project-maincontent .project-items .project-content > div h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .project-maincontent .project-items .project-content > div p {
+  font-size: 1.1rem;
+  line-height: 25px;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .project-maincontent .project-items .project-content:hover {
-  background: #161616;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.project-maincontent .project-items .project-content:hover img,
+.project-maincontent .project-items .project-content:hover svg,
+.project-maincontent .project-items .project-content:hover h3,
+.project-maincontent .project-items .project-content:hover p {
+  opacity: 0.08;
 }
 
 .project-maincontent .project-items .project-content.letmeask {
   background: #835afd;
+}
+
+.project-maincontent .project-items .project-content.letmeask:before {
+  width: 0;
+  height: 100%;
 }
 
 .project-maincontent .project-items .project-content.letmeask > div h4 {
@@ -1369,7 +1412,11 @@ div > li {
 
 .project-maincontent .project-items .project-content.letmeask:hover > div h4 {
   display: block;
-  margin-top: 1rem;
+  text-align: center;
+}
+
+.project-maincontent .project-items .project-content.letmeask:hover:before {
+  width: 100%;
 }
 
 .project-maincontent .project-items .project-content.senai {
@@ -1380,8 +1427,18 @@ div > li {
   display: none;
 }
 
+.project-maincontent .project-items .project-content.senai:before {
+  width: 0;
+  height: 100%;
+}
+
 .project-maincontent .project-items .project-content.senai:hover > div h4 {
   display: block;
+  text-align: center;
+}
+
+.project-maincontent .project-items .project-content.senai:hover:before {
+  width: 100%;
 }
 
 .project-maincontent .project-items .project-content.spring {
@@ -1392,11 +1449,45 @@ div > li {
   display: none;
 }
 
-.project-maincontent .project-items .project-content.spring:hover > div h4 {
-  display: block;
+.project-maincontent .project-items .project-content.spring:before {
+  width: 0;
+  height: 100%;
 }
 
-.project-maincontent .project-items img {
+.project-maincontent .project-items .project-content.spring:hover > div h4 {
+  display: block;
+  text-align: center;
+}
+
+.project-maincontent .project-items .project-content.spring:hover:before {
+  width: 100%;
+}
+
+.project-maincontent .project-items .project-content .project-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.project-maincontent .project-items .project-content .project-title img {
+  min-width: none;
+  height: 50px;
+  width: 70px;
+}
+
+.project-maincontent .project-items > img {
   border-radius: 20px;
   min-width: 13rem;
   margin-right: 45px;
@@ -1559,6 +1650,23 @@ a {
   .card-text p {
     font-size: 1.3rem;
   }
+  .project-maincontent {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .project-maincontent img {
+    display: none;
+  }
+  .project-maincontent .project-items .project-content {
+    padding: 50px;
+  }
+  .project-maincontent .project-items .project-content > div h3 {
+    font-size: 2rem;
+  }
+  .project-maincontent .project-items .project-content > div p {
+    font-size: 1.3rem;
+  }
   #items-wrapper #items .item .ProjectsContent {
     padding: 100px 30px;
   }
@@ -1579,8 +1687,7 @@ a {
   }
   #introduction,
   #formacao,
-  #skills,
-  .projects {
+  #skills {
     padding: 100px;
   }
   .skills-bar {
@@ -1591,19 +1698,6 @@ a {
 @media (max-width: 1280px) {
   .containerIntroduction > img {
     display: none;
-  }
-  .project-maincontent img {
-    display: none;
-  }
-  .project-maincontent #items-wrapper {
-    width: 75vw;
-  }
-  .project-maincontent #items-wrapper #items .item .ProjectsContent {
-    padding: 100px 10px;
-  }
-  .project-maincontent #items-wrapper #items .item .ProjectsContent p {
-    padding: 0 30px;
-    font-size: 1.3rem;
   }
 }
 
@@ -1645,15 +1739,6 @@ a {
   }
   #items-wrapper {
     width: 85vw;
-  }
-  #items-wrapper #items .item .ProjectsContent {
-    padding: 40px 20px 170px 20px;
-  }
-  #items-wrapper #items .item .ProjectsContent h1 {
-    font-size: 2rem;
-  }
-  #items-wrapper #items .item .ProjectsContent p {
-    font-size: 1.3rem;
   }
   .box_cvbutton {
     top: 20%;
@@ -1702,10 +1787,6 @@ a {
 @media (max-width: 570px) {
   html {
     font-size: 78.75%;
-  }
-  .project-maincontent #items-wrapper #items .item .ProjectsContent p {
-    padding: 0 10px;
-    font-size: 1.3rem;
   }
   .container .containerIntroduction,
   .container-skills {

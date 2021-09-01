@@ -42,7 +42,6 @@ img {
     height: 100%;
     position: relative;
     overflow-y: scroll;
-    scroll-snap-type: y proximity;
 }
 
 .container section {
@@ -52,9 +51,7 @@ img {
     gap: 4rem;
     align-items: center;
     width: 100%;
-    scroll-snap-align: center;
 }
-
 //fim do container
 
 //sections
@@ -83,7 +80,7 @@ img {
     min-height: 75vh;
     width: 100%;
 
-    padding: 100px 200px;
+    padding: 100px 150px;
     > h1 {
         color: #fff;
     }
@@ -1056,47 +1053,95 @@ div > li {
         .project-content {
             color: #fff;
 
-            padding: 1rem 1rem;
+            padding: 2rem;
             border-radius: 25px;
             margin-bottom: 1rem;
             min-height: 200px;
+            height: 100%;
+            position: relative;
 
             display: flex;
+            gap: 2rem;
             justify-content: center;
             align-items: center;
 
-            transition: background-color 1s ease-out;
+            transition: filter 0.5s ease-out;
+
+            > img {
+                height: 150px;
+                object-fit: cover;
+                &:hover {
+                    filter: none;
+                }
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                border-radius: 24px;
+
+                transform: translate(-50%, -50%);
+
+                width: 100%;
+                height: 100%;
+
+                background: rgba(0, 0, 0, 0.815);
+                z-index: -1;
+                transition: 0.5s ease-out;
+            }
 
             > div {
-                display: flex;
+                display: block;
                 flex-direction: column;
                 justify-content: center;
-                min-height: 200px;
+                min-height: 230px;
 
                 h3 {
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
                 }
 
                 p {
+                    font-size: 1.1rem;
+                    line-height: 25px;
                     margin-top: 20px;
+                    margin-bottom: 10px;
                 }
             }
 
             &:hover {
-                background: rgb(22, 22, 22);
+                img,
+                svg,
+                h3,
+                p {
+                    opacity: 0.08;
+                }
+                filter: brightness(1);
             }
 
             &.letmeask {
                 background: #835afd;
+
+                &:before {
+                    width: 0;
+                    height: 100%;
+                }
 
                 > div h4 {
                     display: none;
                 }
 
                 &:hover {
-                    > div h4 {
-                        display: block;
-                        margin-top: 1rem;
+                    > div {
+                        h4 {
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+
+                    &:before {
+                        width: 100%;
                     }
                 }
             }
@@ -1108,9 +1153,21 @@ div > li {
                     display: none;
                 }
 
+                &:before {
+                    width: 0;
+                    height: 100%;
+                }
+
                 &:hover {
-                    > div h4 {
-                        display: block;
+                    > div {
+                        h4 {
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+
+                    &:before {
+                        width: 100%;
                     }
                 }
             }
@@ -1122,15 +1179,42 @@ div > li {
                     display: none;
                 }
 
+                &:before {
+                    width: 0;
+                    height: 100%;
+                }
+
                 &:hover {
-                    > div h4 {
-                        display: block;
+                    > div {
+                        h4 {
+                            display: block;
+                            text-align: center;
+                        }
                     }
+
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .project-title {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    min-width: none;
+                    height: 50px;
+                    width: 70px;
                 }
             }
         }
 
-        img {
+        > img {
             border-radius: 20px;
             min-width: 13rem;
             margin-right: 45px;
@@ -1260,6 +1344,26 @@ a {
         font-size: 1.3rem;
     }
 
+    .project-maincontent {
+        img {
+            display: none;
+        }
+
+        justify-content: center;
+    }
+
+    .project-maincontent .project-items .project-content {
+        padding: 50px;
+    }
+
+    .project-maincontent .project-items .project-content > div h3 {
+        font-size: 2rem;
+    }
+
+    .project-maincontent .project-items .project-content > div p {
+        font-size: 1.3rem;
+    }
+
     #items-wrapper #items .item .ProjectsContent {
         padding: 100px 30px;
 
@@ -1287,8 +1391,7 @@ a {
     }
     #introduction,
     #formacao,
-    #skills,
-    .projects {
+    #skills {
         padding: 100px;
     }
 
@@ -1301,25 +1404,6 @@ a {
     .containerIntroduction {
         > img {
             display: none;
-        }
-    }
-
-    .project-maincontent {
-        img {
-            display: none;
-        }
-
-        #items-wrapper {
-            width: 75vw;
-        }
-
-        #items-wrapper #items .item .ProjectsContent {
-            padding: 100px 10px;
-        }
-
-        #items-wrapper #items .item .ProjectsContent p {
-            padding: 0 30px;
-            font-size: 1.3rem;
         }
     }
 }
@@ -1369,18 +1453,6 @@ a {
 
     #items-wrapper {
         width: 85vw;
-    }
-
-    #items-wrapper #items .item .ProjectsContent {
-        padding: 40px 20px 170px 20px;
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        p {
-            font-size: 1.3rem;
-        }
     }
 
     .box_cvbutton {
@@ -1438,11 +1510,6 @@ a {
 @media (max-width: 570px) {
     html {
         font-size: 78.75%;
-    }
-
-    .project-maincontent #items-wrapper #items .item .ProjectsContent p {
-        padding: 0 10px;
-        font-size: 1.3rem;
     }
 
     .container .containerIntroduction,
