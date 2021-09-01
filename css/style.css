@@ -109,8 +109,8 @@ img:hover {
 }
 
 #skills {
-  padding: 100px 150px;
   width: 100%;
+  padding: 100px 150px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -174,7 +174,7 @@ img:hover {
 
 /* SVG background image via https://haikei.app/ */
 .spacer {
-  aspect-ratio: 960/300;
+  aspect-ratio: 400/50;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -182,7 +182,7 @@ img:hover {
 }
 
 .layer1 {
-  background-image: url("../svgs/layer1.svg");
+  background-image: url("../svgs/blob-scene-haikei-formacao.svg");
 }
 
 .containerIntroduction {
@@ -267,6 +267,7 @@ img:hover {
 
 .subtitle h2 {
   background-repeat: repeat;
+  font-weight: 700;
   background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -1277,7 +1278,7 @@ div > li {
   }
 }
 
-.container-project {
+.project-maincontent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1289,172 +1290,116 @@ div > li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
-.container-project img {
+.project-maincontent > img {
+  float: left;
   height: 20rem;
 }
 
-.container-project img:hover {
+.project-maincontent > img:hover {
   -webkit-filter: none;
           filter: none;
 }
 
-#items-wrapper {
-  width: 50vw;
-}
-
-#items-wrapper #items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-}
-
-#items-wrapper #items .item {
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-  width: 80%;
-  border-radius: 100px;
-  height: 400px;
-  scroll-snap-align: start;
-  -webkit-transition: -webkit-filter 0.2s;
-  transition: -webkit-filter 0.2s;
-  transition: filter 0.2s;
-  transition: filter 0.2s, -webkit-filter 0.2s;
-}
-
-#items-wrapper #items .item:hover {
-  -webkit-filter: brightness(1.2);
-          filter: brightness(1.2);
-}
-
-#items-wrapper #items .item .ProjectsContent {
-  width: 100%;
+.project-maincontent .project-items {
   height: 100%;
-  padding: 100px;
-  border-radius: 50px 50px 0 0;
-}
-
-#items-wrapper #items .item .ProjectsContent.letmeask {
-  background: #9d7dfe;
-}
-
-#items-wrapper #items .item .ProjectsContent.senai {
-  background: #9a3535;
-}
-
-#items-wrapper #items .item .ProjectsContent.spring {
-  background: #a7683bfa;
-}
-
-#items-wrapper #items .item .ProjectsContent .LetMeAskContent {
-  max-width: 1200px;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  max-width: 900px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-#items-wrapper #items .item .ProjectsContent .LetMeAskContent strong {
-  color: #dadada;
-}
-
-#items-wrapper #items .item .ProjectsContent .SenaiVagasContent {
-  max-width: 1200px;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#items-wrapper #items .item .ProjectsContent .SenaiVagasContent strong {
-  color: #dadada;
-}
-
-#items-wrapper #items .item .ProjectsContent .SpringBankContent {
-  max-width: 1200px;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#items-wrapper #items .item .ProjectsContent .SpringBankContent strong {
-  color: #dadada;
-}
-
-#items-wrapper #items .item .ProjectsContent p,
-#items-wrapper #items .item .ProjectsContent h1 {
+.project-maincontent .project-items .date {
   color: #fff;
 }
 
-#items-wrapper #items .item .ProjectsContent h1 {
-  font-size: 3rem;
+.project-maincontent .project-items .project-content {
+  color: #fff;
+  padding: 1rem 1rem;
+  border-radius: 25px;
+  margin-bottom: 1rem;
+  min-height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: background-color 1s ease-out;
+  transition: background-color 1s ease-out;
 }
 
-#items-wrapper #items .item .ProjectsContent p {
-  height: 100%;
-  font-size: 1.1rem;
-  max-width: 600px;
-  max-height: 100px;
+.project-maincontent .project-items .project-content > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 200px;
 }
 
-#items-wrapper .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  -webkit-transition: background-color 0.6s ease;
-  transition: background-color 0.6s ease;
+.project-maincontent .project-items .project-content > div h3 {
+  font-size: 1.5rem;
 }
 
-#items-wrapper .active,
-#items-wrapper .dot:hover {
-  background-color: #ffffff;
+.project-maincontent .project-items .project-content > div p {
+  margin-top: 20px;
+}
+
+.project-maincontent .project-items .project-content:hover {
+  background: #161616;
+}
+
+.project-maincontent .project-items .project-content.letmeask {
+  background: #835afd;
+}
+
+.project-maincontent .project-items .project-content.letmeask > div h4 {
+  display: none;
+}
+
+.project-maincontent .project-items .project-content.letmeask:hover > div h4 {
+  display: block;
+  margin-top: 1rem;
+}
+
+.project-maincontent .project-items .project-content.senai {
+  background: #a73b3bfa;
+}
+
+.project-maincontent .project-items .project-content.senai > div h4 {
+  display: none;
+}
+
+.project-maincontent .project-items .project-content.senai:hover > div h4 {
+  display: block;
+}
+
+.project-maincontent .project-items .project-content.spring {
+  background: #a7683bfa;
+}
+
+.project-maincontent .project-items .project-content.spring > div h4 {
+  display: none;
+}
+
+.project-maincontent .project-items .project-content.spring:hover > div h4 {
+  display: block;
+}
+
+.project-maincontent .project-items img {
+  border-radius: 20px;
+  min-width: 13rem;
+  margin-right: 45px;
 }
 
 a {
@@ -1647,16 +1592,16 @@ a {
   .containerIntroduction > img {
     display: none;
   }
-  .container-project img {
+  .project-maincontent img {
     display: none;
   }
-  .container-project #items-wrapper {
+  .project-maincontent #items-wrapper {
     width: 75vw;
   }
-  .container-project #items-wrapper #items .item .ProjectsContent {
+  .project-maincontent #items-wrapper #items .item .ProjectsContent {
     padding: 100px 10px;
   }
-  .container-project #items-wrapper #items .item .ProjectsContent p {
+  .project-maincontent #items-wrapper #items .item .ProjectsContent p {
     padding: 0 30px;
     font-size: 1.3rem;
   }
@@ -1758,7 +1703,7 @@ a {
   html {
     font-size: 78.75%;
   }
-  .container-project #items-wrapper #items .item .ProjectsContent p {
+  .project-maincontent #items-wrapper #items .item .ProjectsContent p {
     padding: 0 10px;
     font-size: 1.3rem;
   }

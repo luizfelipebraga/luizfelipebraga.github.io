@@ -90,15 +90,14 @@ img {
 }
 
 #formacao {
-    // flex-direction: column;
     width: 100%;
     padding: 45px 150px 150px 150px;
     background: #121214;
 }
 
 #skills {
-    padding: 100px 150px;
     width: 100%;
+    padding: 100px 150px;
     justify-content: space-between;
     color: #fff;
     background: #0d0d0e;
@@ -160,7 +159,7 @@ img {
 /* SVG background image via https://haikei.app/ */
 
 .spacer {
-    aspect-ratio: 960/300;
+    aspect-ratio: 400/50;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -168,7 +167,7 @@ img {
 }
 
 .layer1 {
-    background-image: url("../svgs/layer1.svg");
+    background-image: url("../svgs/blob-scene-haikei-formacao.svg");
 }
 
 .containerIntroduction {
@@ -219,6 +218,7 @@ img {
 
     h2 {
         background-repeat: repeat;
+        font-weight: 700;
         background-size: 100%;
         background-clip: text;
         -webkit-background-clip: text;
@@ -1029,149 +1029,114 @@ div > li {
     }
 }
 
-.container-project {
+.project-maincontent {
     display: flex;
     align-items: center;
     height: 100%;
     justify-content: space-between;
     width: 100%;
-    flex-wrap: wrap;
 
-    img {
+    > img {
+        float: left;
         height: 20rem;
         &:hover {
             filter: none;
         }
     }
-}
 
-//carousel Projects
-#items-wrapper {
-    width: 50vw;
+    .project-items {
+        height: 100%;
+        max-width: 900px;
+        align-items: center;
 
-    #items {
-        display: flex;
-        overflow-x: auto;
-        overflow-y: hidden;
+        .date {
+            color: #fff;
+        }
 
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
+        .project-content {
+            color: #fff;
 
-        .item {
-            flex: none;
+            padding: 1rem 1rem;
+            border-radius: 25px;
+            margin-bottom: 1rem;
+            min-height: 200px;
 
-            width: 80%;
-            border-radius: 100px;
-            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            scroll-snap-align: start;
+            transition: background-color 1s ease-out;
 
-            transition: filter 0.2s;
+            > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 200px;
 
-            &:hover {
-                filter: brightness(1.2);
-            }
-
-            .ProjectsContent {
-                width: 100%;
-                height: 100%;
-
-                padding: 100px;
-                border-radius: 50px 50px 0 0;
-
-                &.letmeask {
-                    background: #9d7dfe;
-                }
-
-                &.senai {
-                    background: rgb(154, 53, 53);
-                }
-
-                &.spring {
-                    background: #a7683bfa;
-                }
-
-                .LetMeAskContent {
-                    max-width: 1200px;
-                    height: 100%;
-
-                    display: flex;
-                    flex-wrap: wrap;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    strong {
-                        color: rgb(218, 218, 218);
-                    }
-                }
-
-                .SenaiVagasContent {
-                    max-width: 1200px;
-                    height: 100%;
-
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    strong {
-                        color: rgb(218, 218, 218);
-                    }
-                }
-
-                .SpringBankContent {
-                    max-width: 1200px;
-                    height: 100%;
-
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    strong {
-                        color: rgb(218, 218, 218);
-                    }
-                }
-
-                p,
-                h1 {
-                    color: #fff;
-                }
-
-                h1 {
-                    font-size: 3rem;
+                h3 {
+                    font-size: 1.5rem;
                 }
 
                 p {
-                    height: 100%;
-                    font-size: 1.1rem;
-                    max-width: 600px;
-                    max-height: 100px;
+                    margin-top: 20px;
+                }
+            }
+
+            &:hover {
+                background: rgb(22, 22, 22);
+            }
+
+            &.letmeask {
+                background: #835afd;
+
+                > div h4 {
+                    display: none;
+                }
+
+                &:hover {
+                    > div h4 {
+                        display: block;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+
+            &.senai {
+                background: #a73b3bfa;
+
+                > div h4 {
+                    display: none;
+                }
+
+                &:hover {
+                    > div h4 {
+                        display: block;
+                    }
+                }
+            }
+
+            &.spring {
+                background: #a7683bfa;
+
+                > div h4 {
+                    display: none;
+                }
+
+                &:hover {
+                    > div h4 {
+                        display: block;
+                    }
                 }
             }
         }
-    }
 
-    .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-
-    .active,
-    .dot:hover {
-        background-color: #ffffff;
+        img {
+            border-radius: 20px;
+            min-width: 13rem;
+            margin-right: 45px;
+        }
     }
 }
-
-//fim carousel
 
 a {
     cursor: pointer;
@@ -1339,7 +1304,7 @@ a {
         }
     }
 
-    .container-project {
+    .project-maincontent {
         img {
             display: none;
         }
@@ -1475,7 +1440,7 @@ a {
         font-size: 78.75%;
     }
 
-    .container-project #items-wrapper #items .item .ProjectsContent p {
+    .project-maincontent #items-wrapper #items .item .ProjectsContent p {
         padding: 0 10px;
         font-size: 1.3rem;
     }
