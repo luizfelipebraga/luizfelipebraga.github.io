@@ -1659,7 +1659,7 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .project-maincontent img {
+  .project-maincontent > img {
     display: none;
   }
   .project-maincontent .project-items .project-content {
