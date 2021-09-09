@@ -86,6 +86,14 @@ img {
     }
 }
 
+#felipe {
+    width: 100%;
+    padding: 45px 150px 150px 150px;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #121214;
+}
+
 #formacao {
     width: 100%;
     padding: 45px 150px 150px 150px;
@@ -322,58 +330,22 @@ img {
 .logo b span:nth-of-type(2) {
     animation: blink linear infinite 3s;
 }
-@keyframes blink {
-    78% {
-        color: inherit;
-        text-shadow: inherit;
-    }
-    79% {
-        color: #333;
-    }
-    80% {
-        text-shadow: none;
-    }
-    81% {
-        color: inherit;
-        text-shadow: inherit;
-    }
-    82% {
-        color: #333;
-        text-shadow: none;
-    }
-    83% {
-        color: inherit;
-        text-shadow: inherit;
-    }
-    92% {
-        color: #333;
-        text-shadow: none;
-    }
-    92.5% {
-        color: inherit;
-        text-shadow: inherit;
-    }
-}
 
-.anim-typewriter {
-    animation: typewriter 2s steps(44) 1s 1 normal both, blinkTextCursor 700ms steps(44) infinite normal;
-}
 
-@keyframes typewriter {
-    from {
-        width: 0;
-    }
-    to {
-        width: 10em;
-    }
-}
+.maincontent-felipe {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
 
-@keyframes blinkTextCursor {
-    from {
-        border-right-color: rgba(255, 255, 255, 0.75);
-    }
-    to {
-        border-right-color: transparent;
+    max-width: 1100px;
+    p {
+        font-weight: 500;
+        padding: 50px;
+        background: #fff;
+        color: rgb(37, 37, 37);
+        font-size: 1.2rem;
+        word-break: normal;
+        border-radius: 20px;
     }
 }
 
@@ -420,7 +392,7 @@ h1 {
 
 h2 {
     color: #000;
-    font-size: 2.2rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 
