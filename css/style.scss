@@ -88,7 +88,7 @@ img {
 
 #felipe {
     width: 100%;
-    padding: 45px 150px 150px 150px;
+    padding: 120px 150px 100px 150px;
     flex-direction: column;
     justify-content: space-between;
     background: #121214;
@@ -331,7 +331,6 @@ img {
     animation: blink linear infinite 3s;
 }
 
-
 .maincontent-felipe {
     display: flex;
     align-items: center;
@@ -341,11 +340,24 @@ img {
     p {
         font-weight: 500;
         padding: 50px;
-        background: #fff;
-        color: rgb(37, 37, 37);
+        color: rgb(148, 148, 148);
         font-size: 1.2rem;
-        word-break: normal;
+        text-align: left;
         border-radius: 20px;
+        line-height: 30px;
+
+        strong {
+            color: #fff;
+        }
+    }
+
+    img {
+        border-radius: 50%;
+
+        border: double 10px transparent;
+        background-image: linear-gradient(#282848, #3f3d56), linear-gradient(to right, #282848, #3f3d56);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
     }
 }
 
@@ -1002,7 +1014,7 @@ div > li {
     display: flex;
     align-items: center;
     height: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
 
     > img {
@@ -1321,7 +1333,7 @@ a {
     }
 
     .project-maincontent {
-        >img {
+        > img {
             display: none;
         }
 
@@ -1377,7 +1389,22 @@ a {
 }
 
 @media (max-width: 1280px) {
+
+    
+
     .containerIntroduction {
+        > img {
+            display: none;
+        }
+    }
+
+    .maincontent-felipe {
+        > img {
+            display: none;
+        }
+    }
+
+    .project-content {
         > img {
             display: none;
         }
@@ -1409,6 +1436,14 @@ a {
     #skills,
     .projects {
         padding: 50px;
+    }
+
+    #felipe {
+        width: 100%;
+        padding: 120px 50px 50px 50px;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #121214;
     }
 
     .containerIntroduction {
