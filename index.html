@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" href="./images/orangeCircle.png" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -105,8 +106,9 @@
                 <hr>
             </div>
 
-            <div class="maincontent-felipe">
-                <p><strong>Olá, eu sou Luiz, tenho 18 anos de idade</strong>. Entusiasta por tecnologia em geral. Estou sempre procurando
+            <div class="maincontent-felipe" data-aos="fade-left">
+                <p><strong>Olá, eu sou Luiz, tenho 18 anos de idade</strong>. Entusiasta por tecnologia em geral. Estou
+                    sempre procurando
                     por constante
                     evolução técnica e pessoal. Comecei a programar com 16 anos na Escola técnica Senai de Informática,
                     onde aprendi principios que abriram meus olhos para o mundo da programação.
@@ -117,19 +119,14 @@
                         Architect.</strong>
                 </p>
 
-                <img src="images/githubprofile.jfif" alt="">
+                <img src="images/githubprofile.jfif" alt="minha foto de perfil">
             </div>
         </section>
 
         <section id="formacao">
-            <!-- <div class="subtitle">
-                <h2>Formação</h2>
-                <span>Conheça meu histórico</span>
-                <hr>
-            </div> -->
 
             <div class="main-content-formacao">
-                <div class="Container-Card">
+                <div class="Container-Card" data-aos="fade-right">
                     <div class="card">
                         <div class="card-image">
                             <img class="impacta" src="images/logo-impacta.png" alt="impacta">
@@ -221,7 +218,7 @@
                 <hr>
             </div>
 
-            <div class="container-skills">
+            <div class="container-skills" data-aos="fade-up-left">
                 <div class="skills-bar">
                     <h4>HardSkills</h4>
                     <div class="bar">
@@ -444,7 +441,7 @@
 
                 <div class="project-items">
 
-                    <div class="box-project">
+                    <div class="box-project" data-aos="fade-left" data-aos-duration="6000">
                         <div class="date"><span>2021</span></div>
                         <a href="https://github.com/luizfelipebraga/react-letmeask-nlw" target="_blank">
                             <div class="project-content letmeask">
@@ -479,7 +476,7 @@
                         </a>
                     </div>
 
-                    <div class="box-project">
+                    <div class="box-project" data-aos="fade-left" data-aos-duration="5000">
                         <div class="date"><span>2020</span></div>
                         <a href="https://github.com/luizfelipebraga/SenaiVagas" target="_blank">
                             <div class="project-content senai">
@@ -535,7 +532,7 @@
                         </a>
                     </div>
 
-                    <div class="box-project">
+                    <div class="box-project" data-aos="fade-left" data-aos-duration="5000">
                         <div class="date"><span>2020</span></div>
                         <a href="https://github.com/luizfelipebraga/java-bank-project" target="_blank">
                             <div class="project-content spring">
@@ -572,8 +569,6 @@
             <main class="main-contato">
                 <img class="profile-svg" src="svgs/social-svg.svg" alt="imagem de meu perfil">
 
-                <!-- <img class="github-pic"src="images/fogo.jfif" alt="github foto"> -->
-
                 <div class="containerInfos">
                     <span>Redes Sociais</span>
 
@@ -603,8 +598,15 @@
         </section>
     </div>
 
-</body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 400, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 1000 // values from 0 to 3000, with step 50ms
+        });
+    </script>
 
-<script src="js/index.js"></script>
+</body>
 
 </html>

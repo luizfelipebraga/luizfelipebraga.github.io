@@ -1,0 +1,11 @@
+{
+  "name": "portifolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/luizfelipebraga/luizfelipebraga.github.io.git",
+  "author": "Luiz <ruivolfb@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6"
+  }
+}
