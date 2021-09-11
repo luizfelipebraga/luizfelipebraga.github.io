@@ -59,7 +59,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #introduction {
