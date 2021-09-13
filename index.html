@@ -4,16 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="author" content="Luiz Felipe Braga">
     <meta name="keywords" content="freelance, freelancer, responsive, web, website, ui, ux, user, interface, experience, graphic, 
         creative, designer, product, mobile, application, app, animation, interaction, photography, 
         art, hire, agency, studio, consultancy, portfolio, case, study, studies, projects">
+
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="icon" href="./images/orangeCircle.png" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css">
+
+    <link rel="icon" href="./images/orangeCircle.png" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I'm Luiz Felipe.</title>
 </head>
@@ -218,7 +227,7 @@
                 <hr>
             </div>
 
-            <div class="container-skills" data-aos="fade-up-left">
+            <div class="container-skills" data-aos="fade-up">
                 <div class="skills-bar">
                     <h4>HardSkills</h4>
                     <div class="bar">
@@ -437,11 +446,11 @@
 
             <div class="project-maincontent">
                 <!-- <img src="svgs/web-devoloper-ruivo-svg.svg" alt="imagem de uma pessoa programando"> -->
-                <img src="svgs/developing-purple-background.svg" alt="imagem de uma pessoa programando">
+                <!-- <img src="svgs/developing-purple-background.svg" alt="imagem de uma pessoa programando"> -->
 
                 <div class="project-items">
 
-                    <div class="box-project" data-aos="fade-left" data-aos-duration="6000">
+                    <div class="box-project" data-aos="fade-left" data-aos-duration="5000">
                         <div class="date"><span>2021</span></div>
                         <a href="https://github.com/luizfelipebraga/react-letmeask-nlw" target="_blank">
                             <div class="project-content letmeask">
@@ -557,10 +566,14 @@
                             </div>
                         </a>
                     </div>
-
                 </div>
             </div>
 
+            <div class="linkcontact">
+                <h3>Precisando de um <strong>Estagiário ou Dev Jr?</strong></h3>
+
+                <a href="#myself">VAMOS TRABALHAR JUNTOS -></a>
+            </div>
         </section>
 
         <hr>
@@ -592,8 +605,20 @@
                             <span>luizfelipebraga</span>
                         </div>
                     </a>
-
                 </div>
+
+                <form action="https://formsubmit.co/luizfelipebragaa@gmail.com" method="POST">
+                    <label for="fname">Nome:</label>
+                    <input type="text" id="fname" name="fname">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+
+                    <label>Assunto:</label>
+                    <textarea name="textarea" id="assunto" cols="30" rows="10"></textarea>
+
+                    <input class="btn cv" type="submit" value="Enviar" />
+                </form>
             </main>
         </section>
     </div>
@@ -608,6 +633,22 @@
         });
     </script>
 
+    <script src="dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            backgroundTransition: 'slide'
+        });
+    </script>
+
+    <script>
+        import Reveal from 'reveal.js';
+        import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
+
+        let deck = new Reveal({
+            plugins: [Markdown]
+        })
+        deck.initialize();
+    </script>
 </body>
 
 </html>

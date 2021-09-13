@@ -6,6 +6,7 @@
   "author": "Luiz <ruivolfb@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "aos": "^3.0.0-beta.6"
+    "aos": "^3.0.0-beta.6",
+    "reveal.js": "^4.1.3"
   }
 }

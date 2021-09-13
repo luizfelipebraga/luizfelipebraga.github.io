@@ -25,7 +25,7 @@ span,
 li,
 p,
 a,
-details {
+details, form, input, textarea {
     font-family: "Inter", sans-serif;
 }
 
@@ -1037,7 +1037,6 @@ div > li {
             color: #fff;
 
             padding: 2rem;
-            border-radius: 25px;
             margin-bottom: 1rem;
             min-height: 200px;
             height: 100%;
@@ -1063,7 +1062,6 @@ div > li {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                border-radius: 24px;
 
                 transform: translate(-50%, -50%);
 
@@ -1209,6 +1207,37 @@ div > li {
     }
 }
 
+.linkcontact {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    padding: 140px 0 110px 0;
+
+    a {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        font-weight: 700;
+        color: #fff;
+
+        transition: text-decoration 1s ease;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    h3{
+        strong {
+            color: #fff;
+        }
+        color: #9b9b9b;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+}
+
 a {
     cursor: pointer;
     text-decoration: none;
@@ -1219,6 +1248,7 @@ a {
     width: 100%;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 5rem;
     align-items: center;
@@ -1290,6 +1320,42 @@ a {
         &:hover {
             filter: brightness(1.5);
         }
+    }
+}
+
+form {
+    max-width: 400px;
+    width: 100%;
+    margin: 10px;
+    padding: 2rem;
+    
+    display: inline-flex;
+    flex-direction: column;
+
+    label {
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
+
+    input {
+        border: 0;
+        font-size: 1rem;
+        border-radius: 5px;
+        padding: .5rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    textarea {
+        border: 0;
+        border-radius: 5px;
+        padding: .5rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    input[type="submit"] {
+        cursor: pointer;
     }
 }
 
