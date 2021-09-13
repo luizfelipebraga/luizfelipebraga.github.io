@@ -26,7 +26,10 @@ span,
 li,
 p,
 a,
-details, form, input, textarea {
+details,
+form,
+input,
+textarea {
   font-family: "Inter", sans-serif;
 }
 
@@ -1491,9 +1494,6 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
 }
 
@@ -1521,9 +1521,6 @@ a {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   text-align: center;
 }
 
@@ -1597,7 +1594,26 @@ a {
           filter: brightness(1.5);
 }
 
-form {
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form span {
+  color: #e1e1e6;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.form form {
   max-width: 400px;
   width: 100%;
   margin: 10px;
@@ -1611,29 +1627,29 @@ form {
           flex-direction: column;
 }
 
-form label {
+.form form label {
   color: #fff;
   font-size: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
-form input {
+.form form input {
   border: 0;
   font-size: 1rem;
   border-radius: 5px;
-  padding: .5rem;
+  padding: 0.5rem;
   width: 100%;
   margin-bottom: 1rem;
 }
 
-form textarea {
+.form form textarea {
   border: 0;
   border-radius: 5px;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   margin-bottom: 1rem;
 }
 
-form input[type="submit"] {
+.form form input[type="submit"] {
   cursor: pointer;
 }
 
