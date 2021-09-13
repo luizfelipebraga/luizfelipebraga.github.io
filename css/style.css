@@ -1493,7 +1493,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 5rem;
+  gap: 8rem;
   position: relative;
 }
 
@@ -1511,6 +1511,33 @@ a {
   border-radius: 50%;
 }
 
+.current-work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 500px;
+}
+
+.current-work span {
+  color: #e1e1e6;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.current-work p {
+  color: #a2a2a7;
+  font-size: 1.1rem;
+  margin-top: 4rem;
+  line-height: 28px;
+}
+
 .containerInfos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1522,6 +1549,10 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-align: center;
+}
+
+.containerInfos > div {
+  margin-top: 2rem;
 }
 
 .containerInfos span {
@@ -1610,6 +1641,7 @@ a {
 .form span {
   color: #e1e1e6;
   font-size: 25px;
+  padding-top: .35rem;
   font-weight: 600;
 }
 
@@ -1743,6 +1775,9 @@ a {
   .project-content > img {
     display: none;
   }
+  .current-work p {
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1773,6 +1808,7 @@ a {
   }
   #felipe {
     width: 100%;
+    padding: 100px 10px 10px 10px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

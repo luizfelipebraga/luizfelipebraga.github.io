@@ -1249,11 +1249,10 @@ a {
 .main-contato {
     height: 100%;
     width: 100%;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 5rem;
+    gap: 8rem;
     position: relative;
 
     .profile-svg {
@@ -1269,11 +1268,35 @@ a {
     }
 }
 
+.current-work {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 500px;
+
+    span {
+        color:#e1e1e6;
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    p {
+        color: #a2a2a7;
+        font-size: 1.1rem;
+        margin-top: 4rem;
+        line-height: 28px;
+    }
+}
+
 .containerInfos {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
+
+    >div {
+        margin-top: 2rem;
+    }
 
     span {
         color: #a2a2a7;
@@ -1332,6 +1355,7 @@ a {
     span {
         color:#e1e1e6;
         font-size: 25px;
+        padding-top: .35rem;
         font-weight: 600;
     }
 
@@ -1483,6 +1507,12 @@ a {
             display: none;
         }
     }
+
+    .current-work {
+        p {
+            font-size: 1.3rem;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -1513,6 +1543,7 @@ a {
 
     #felipe {
         width: 100%;
+        padding: 100px 10px 10px 10px;
         flex-direction: column;
         justify-content: space-between;
         background: #121214;
