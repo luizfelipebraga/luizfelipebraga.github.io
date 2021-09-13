@@ -26,7 +26,7 @@ span,
 li,
 p,
 a,
-details {
+details, form, input, textarea {
   font-family: "Inter", sans-serif;
 }
 
@@ -1253,7 +1253,6 @@ div > li {
 .project-maincontent .project-items .project-content {
   color: #fff;
   padding: 2rem;
-  border-radius: 25px;
   margin-bottom: 1rem;
   min-height: 200px;
   height: 100%;
@@ -1290,7 +1289,6 @@ div > li {
   position: absolute;
   top: 50%;
   left: 50%;
-  border-radius: 24px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
@@ -1436,6 +1434,46 @@ div > li {
   margin-right: 45px;
 }
 
+.linkcontact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 140px 0 110px 0;
+}
+
+.linkcontact a {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  font-weight: 700;
+  color: #fff;
+  -webkit-transition: -webkit-text-decoration 1s ease;
+  transition: -webkit-text-decoration 1s ease;
+  transition: text-decoration 1s ease;
+  transition: text-decoration 1s ease, -webkit-text-decoration 1s ease;
+}
+
+.linkcontact a:hover {
+  text-decoration: underline;
+}
+
+.linkcontact h3 {
+  color: #9b9b9b;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.linkcontact h3 strong {
+  color: #fff;
+}
+
 a {
   cursor: pointer;
   text-decoration: none;
@@ -1447,6 +1485,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1555,6 +1595,46 @@ a {
 .containerInfos .infoGithub:hover {
   -webkit-filter: brightness(1.5);
           filter: brightness(1.5);
+}
+
+form {
+  max-width: 400px;
+  width: 100%;
+  margin: 10px;
+  padding: 2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form label {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+
+form input {
+  border: 0;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: .5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+form textarea {
+  border: 0;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+form input[type="submit"] {
+  cursor: pointer;
 }
 
 /* responsive */
