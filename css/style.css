@@ -74,14 +74,14 @@ section {
   min-height: 750px;
 }
 
-#introduction footer > a > img {
+#introduction .redes-socais > a > img {
   margin-left: 10px;
   width: 3rem;
   -webkit-transform: filter 0.2s;
           transform: filter 0.2s;
 }
 
-#introduction footer > a > img:hover {
+#introduction .redes-socais > a > img:hover {
   -webkit-filter: brightness(1.5);
           filter: brightness(1.5);
 }
@@ -247,7 +247,7 @@ section {
   width: 100%;
 }
 
-.containerIntroduction footer {
+.containerIntroduction .redes-socais {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1243,7 +1243,7 @@ div > li {
 
 .project-maincontent .project-items {
   height: 100%;
-  max-width: 1100px;
+  max-width: 1050px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1261,7 +1261,7 @@ div > li {
 
 .project-maincontent .project-items .project-content {
   color: #fff;
-  background: #00000021;
+  background: #7777770f;
   border-radius: 10px;
   padding: 3rem;
   margin-bottom: 3rem;
@@ -1278,10 +1278,10 @@ div > li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: -webkit-transform 0.8s ease-in-out;
-  transition: -webkit-transform 0.8s ease-in-out;
-  transition: transform 0.8s ease-in-out;
-  transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
 .project-maincontent .project-items .project-content > img {
@@ -1343,13 +1343,13 @@ div > li {
 }
 
 .project-maincontent .project-items .project-content:hover {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .project-maincontent .project-items .project-content.letmeask {
-  -webkit-box-shadow: 3px 3px #3f3d56, -1em 0 0.4em #75709e;
-          box-shadow: 3px 3px #3f3d56, -1em 0 0.4em #75709e;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, #3f3d56 0px -2px 6px 0px inset;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, #3f3d56 0px -2px 6px 0px inset;
 }
 
 .project-maincontent .project-items .project-content.letmeask:before {
@@ -1371,8 +1371,8 @@ div > li {
 }
 
 .project-maincontent .project-items .project-content.senai {
-  -webkit-box-shadow: 3px 3px #563d3d, -1em 0 0.4em #9e7070;
-          box-shadow: 3px 3px #563d3d, -1em 0 0.4em #9e7070;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, #75709e 0px -2px 6px 0px inset;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, #75709e 0px -2px 6px 0px inset;
 }
 
 .project-maincontent .project-items .project-content.senai > div h4 {
@@ -1388,7 +1388,7 @@ div > li {
 .project-maincontent .project-items .project-content.senai:hover > div h4 {
   display: block;
   color: #fff;
-  text-align: center;
+  text-align: right;
 }
 
 .project-maincontent .project-items .project-content.senai:hover:before {
@@ -1396,8 +1396,8 @@ div > li {
 }
 
 .project-maincontent .project-items .project-content.spring {
-  -webkit-box-shadow: 3px 3px #3d563d, -1em 0 0.4em #779e70;
-          box-shadow: 3px 3px #3d563d, -1em 0 0.4em #779e70;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, #3f3d56 0px -2px 6px 0px inset;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, #3f3d56 0px -2px 6px 0px inset;
 }
 
 .project-maincontent .project-items .project-content.spring > div h4 {
@@ -1694,6 +1694,36 @@ a {
 
 .form form input[type="submit"] {
   cursor: pointer;
+}
+
+footer {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #000;
+  gap: 1rem;
+}
+
+footer span {
+  font-size: 1.2rem;
+  color: #888888;
+}
+
+footer span:last-child {
+  color: #fff;
+}
+
+footer span a {
+  color: #f5f5f5;
+  text-decoration: underline;
 }
 
 /* responsive */
