@@ -1029,18 +1029,25 @@ div > li {
 
     .project-items {
         height: 100%;
-        max-width: 900px;
+        max-width: 1100px;
         align-items: center;
 
         .date {
             color: #fff;
         }
 
+        .box-project {
+            align-items: center;
+        }
+
         .project-content {
             color: #fff;
+            background: #00000021;
+            border: 1px solid #fff;
+            border-radius: 10px;
 
-            padding: 2rem;
-            margin-bottom: 1rem;
+            padding: 3rem;
+            margin-bottom: 3rem;
             min-height: 200px;
             height: 100%;
             position: relative;
@@ -1050,7 +1057,7 @@ div > li {
             justify-content: center;
             align-items: center;
 
-            transition: filter 0.8s ease-in-out;
+            transition: transform 0.8s ease-in-out;
 
             > img {
                 height: 150px;
@@ -1071,45 +1078,49 @@ div > li {
                 width: 100%;
                 height: 100%;
 
-                background: rgba(0, 0, 0, 0.575);
                 z-index: -1;
                 transition: 0.8s ease-in-out;
             }
 
             > div {
                 display: block;
-                flex-direction: column;
+                margin-top: 3rem;
                 justify-content: center;
                 min-height: 230px;
 
                 h3 {
-                    font-size: 1.8rem;
+                    font-size: 3rem;
                 }
 
                 p {
-                    font-size: 1.1rem;
-                    line-height: 25px;
+                    font-size: 1.2rem;
+                    line-height: 28px;
                     margin-top: 20px;
                     margin-bottom: 10px;
+                    color: #9b9b9b;
+
+                    strong {
+                        color: #fff;
+                    }
                 }
 
                 h4 {
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
+                    text-decoration: underline;
                 }
             }
 
             &:hover {
-                img,
-                svg,
-                h3,
-                p {
-                    opacity: 0.4;
-                }
-                filter: brightness(1);
+                // img,
+                // svg,
+                // h3,
+                // p {
+                //     opacity: 0.4;
+                // }
+                transform: scale(1.15);
             }
 
             &.letmeask {
-                background: #835afd;
 
                 &:before {
                     width: 0;
@@ -1135,10 +1146,10 @@ div > li {
             }
 
             &.senai {
-                background: #a73b3bfa;
 
                 > div h4 {
-                    display: none;
+                    display: hidden;
+                    color: #00000021;
                 }
 
                 &:before {
@@ -1150,6 +1161,7 @@ div > li {
                     > div {
                         h4 {
                             display: block;
+                            color:#fff;
                             text-align: center;
                         }
                     }
@@ -1161,7 +1173,7 @@ div > li {
             }
 
             &.spring {
-                background: #a7683bfa;
+                // background: #75709e;
 
                 > div h4 {
                     display: none;

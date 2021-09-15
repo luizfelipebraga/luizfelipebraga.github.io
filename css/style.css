@@ -1243,7 +1243,7 @@ div > li {
 
 .project-maincontent .project-items {
   height: 100%;
-  max-width: 900px;
+  max-width: 1100px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1253,10 +1253,19 @@ div > li {
   color: #fff;
 }
 
+.project-maincontent .project-items .box-project {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .project-maincontent .project-items .project-content {
   color: #fff;
-  padding: 2rem;
-  margin-bottom: 1rem;
+  background: #00000021;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 3rem;
+  margin-bottom: 3rem;
   min-height: 200px;
   height: 100%;
   position: relative;
@@ -1270,10 +1279,10 @@ div > li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: -webkit-filter 0.8s ease-in-out;
-  transition: -webkit-filter 0.8s ease-in-out;
-  transition: filter 0.8s ease-in-out;
-  transition: filter 0.8s ease-in-out, -webkit-filter 0.8s ease-in-out;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
 }
 
 .project-maincontent .project-items .project-content > img {
@@ -1296,7 +1305,6 @@ div > li {
           transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.575);
   z-index: -1;
   -webkit-transition: 0.8s ease-in-out;
   transition: 0.8s ease-in-out;
@@ -1304,10 +1312,7 @@ div > li {
 
 .project-maincontent .project-items .project-content > div {
   display: block;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  margin-top: 3rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1315,34 +1320,29 @@ div > li {
 }
 
 .project-maincontent .project-items .project-content > div h3 {
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 
 .project-maincontent .project-items .project-content > div p {
-  font-size: 1.1rem;
-  line-height: 25px;
+  font-size: 1.2rem;
+  line-height: 28px;
   margin-top: 20px;
   margin-bottom: 10px;
+  color: #9b9b9b;
+}
+
+.project-maincontent .project-items .project-content > div p strong {
+  color: #fff;
 }
 
 .project-maincontent .project-items .project-content > div h4 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  text-decoration: underline;
 }
 
 .project-maincontent .project-items .project-content:hover {
-  -webkit-filter: brightness(1);
-          filter: brightness(1);
-}
-
-.project-maincontent .project-items .project-content:hover img,
-.project-maincontent .project-items .project-content:hover svg,
-.project-maincontent .project-items .project-content:hover h3,
-.project-maincontent .project-items .project-content:hover p {
-  opacity: 0.4;
-}
-
-.project-maincontent .project-items .project-content.letmeask {
-  background: #835afd;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .project-maincontent .project-items .project-content.letmeask:before {
@@ -1363,12 +1363,9 @@ div > li {
   width: 100%;
 }
 
-.project-maincontent .project-items .project-content.senai {
-  background: #a73b3bfa;
-}
-
 .project-maincontent .project-items .project-content.senai > div h4 {
-  display: none;
+  display: hidden;
+  color: #00000021;
 }
 
 .project-maincontent .project-items .project-content.senai:before {
@@ -1378,15 +1375,12 @@ div > li {
 
 .project-maincontent .project-items .project-content.senai:hover > div h4 {
   display: block;
+  color: #fff;
   text-align: center;
 }
 
 .project-maincontent .project-items .project-content.senai:hover:before {
   width: 100%;
-}
-
-.project-maincontent .project-items .project-content.spring {
-  background: #a7683bfa;
 }
 
 .project-maincontent .project-items .project-content.spring > div h4 {
