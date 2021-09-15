@@ -1262,7 +1262,6 @@ div > li {
 .project-maincontent .project-items .project-content {
   color: #fff;
   background: #00000021;
-  border: 1px solid #fff;
   border-radius: 10px;
   padding: 3rem;
   margin-bottom: 3rem;
@@ -1321,6 +1320,7 @@ div > li {
 
 .project-maincontent .project-items .project-content > div h3 {
   font-size: 3rem;
+  color: #f3f3f3;
 }
 
 .project-maincontent .project-items .project-content > div p {
@@ -1332,17 +1332,24 @@ div > li {
 }
 
 .project-maincontent .project-items .project-content > div p strong {
-  color: #fff;
+  color: #dddddd;
 }
 
 .project-maincontent .project-items .project-content > div h4 {
   font-size: 1.2rem;
+  text-align: right;
   text-decoration: underline;
+  margin-top: 1rem;
 }
 
 .project-maincontent .project-items .project-content:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
+}
+
+.project-maincontent .project-items .project-content.letmeask {
+  -webkit-box-shadow: 3px 3px #3f3d56, -1em 0 0.4em #75709e;
+          box-shadow: 3px 3px #3f3d56, -1em 0 0.4em #75709e;
 }
 
 .project-maincontent .project-items .project-content.letmeask:before {
@@ -1363,6 +1370,11 @@ div > li {
   width: 100%;
 }
 
+.project-maincontent .project-items .project-content.senai {
+  -webkit-box-shadow: 3px 3px #563d3d, -1em 0 0.4em #9e7070;
+          box-shadow: 3px 3px #563d3d, -1em 0 0.4em #9e7070;
+}
+
 .project-maincontent .project-items .project-content.senai > div h4 {
   display: hidden;
   color: #00000021;
@@ -1381,6 +1393,11 @@ div > li {
 
 .project-maincontent .project-items .project-content.senai:hover:before {
   width: 100%;
+}
+
+.project-maincontent .project-items .project-content.spring {
+  -webkit-box-shadow: 3px 3px #3d563d, -1em 0 0.4em #779e70;
+          box-shadow: 3px 3px #3d563d, -1em 0 0.4em #779e70;
 }
 
 .project-maincontent .project-items .project-content.spring > div h4 {

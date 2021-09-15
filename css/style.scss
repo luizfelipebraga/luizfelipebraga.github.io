@@ -1043,7 +1043,6 @@ div > li {
         .project-content {
             color: #fff;
             background: #00000021;
-            border: 1px solid #fff;
             border-radius: 10px;
 
             padding: 3rem;
@@ -1090,6 +1089,7 @@ div > li {
 
                 h3 {
                     font-size: 3rem;
+                    color: #f3f3f3;
                 }
 
                 p {
@@ -1100,13 +1100,15 @@ div > li {
                     color: #9b9b9b;
 
                     strong {
-                        color: #fff;
+                        color: rgb(221, 221, 221);
                     }
                 }
 
                 h4 {
                     font-size: 1.2rem;
+                    text-align: right;
                     text-decoration: underline;
+                    margin-top: 1rem;
                 }
             }
 
@@ -1121,7 +1123,7 @@ div > li {
             }
 
             &.letmeask {
-
+                box-shadow: 3px 3px #3f3d56, -1em 0 0.4em #75709e;
                 &:before {
                     width: 0;
                     height: 100%;
@@ -1146,7 +1148,7 @@ div > li {
             }
 
             &.senai {
-
+                box-shadow: 3px 3px #563d3d, -1em 0 0.4em #9e7070;
                 > div h4 {
                     display: hidden;
                     color: #00000021;
@@ -1173,7 +1175,7 @@ div > li {
             }
 
             &.spring {
-                // background: #75709e;
+                box-shadow: 3px 3px #3d563d, -1em 0 0.4em #779e70;
 
                 > div h4 {
                     display: none;
