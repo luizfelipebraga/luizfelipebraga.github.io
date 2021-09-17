@@ -29,7 +29,9 @@ a,
 details,
 form,
 input,
-textarea {
+textarea,
+nav,
+ul {
   font-family: "Inter", sans-serif;
 }
 
@@ -48,6 +50,87 @@ img:hover {
 .container {
   height: 100%;
   width: 100%;
+}
+
+.scroll-down nav {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up nav {
+  -webkit-filter: drop-shadow(0 -10px 20px #aaaaaa);
+          filter: drop-shadow(0 -10px 20px #aaaaaa);
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: fixed;
+  z-index: 5;
+  padding: 2rem 3rem;
+}
+
+nav.sticky {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5rem 9rem;
+  background: #75709e;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+nav.sticky ul li a {
+  color: white;
+}
+
+nav.sticky ul li a:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-underline-offset: 30px;
+}
+
+nav span {
+  color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+}
+
+nav ul li {
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+nav ul li a {
+  color: #fff;
+  -webkit-transition: -webkit-filter 0.2s ease;
+  transition: -webkit-filter 0.2s ease;
+  transition: filter 0.2s ease;
+  transition: filter 0.2s ease, -webkit-filter 0.2s ease;
+}
+
+nav ul li a:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
 }
 
 section {
@@ -275,6 +358,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 2rem;
 }
 
 .subtitle h2 {
@@ -1653,7 +1737,7 @@ a {
 .form span {
   color: #e1e1e6;
   font-size: 25px;
-  padding-top: .35rem;
+  padding-top: 0.35rem;
   font-weight: 600;
 }
 
@@ -1819,6 +1903,9 @@ footer span a {
   }
   .current-work p {
     font-size: 1.3rem;
+  }
+  nav {
+    display: none;
   }
 }
 

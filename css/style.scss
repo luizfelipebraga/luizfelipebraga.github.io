@@ -28,7 +28,9 @@ a,
 details,
 form,
 input,
-textarea {
+textarea,
+nav,
+ul {
     font-family: "Inter", sans-serif;
 }
 
@@ -43,6 +45,73 @@ img {
 .container {
     height: 100%;
     width: 100%;
+}
+
+.scroll-down {
+	nav {
+		transform: translate3d(0, -100%, 0);
+	}
+}
+
+.scroll-up {
+	nav {
+		filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
+	}
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    transition: 0.5s;
+
+    position: fixed;
+    z-index: 5;
+
+    padding: 2rem 3rem;
+
+    &.sticky {
+        align-items: center;
+        padding: 1.5rem 9rem;
+        background: #75709e;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+        ul li a {
+            color: rgb(255, 255, 255);
+            &:hover {
+                text-decoration-line: underline;
+                text-underline-offset: 30px;
+            }
+        }
+    }
+
+    span {
+        color: #fff;
+        transition: all 0.2s ease-in-out; 
+    }
+
+    ul {
+        position: relative;
+        display: flex;
+        gap: 3rem;
+
+        li {
+            text-decoration: none;
+            list-style: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+
+            a {
+                color: #fff;
+                transition: filter 0.2s ease;
+
+                &:hover {
+                    filter: brightness(.8) ;
+                }
+            }
+        }
+    }
 }
 
 section {
@@ -222,6 +291,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    margin-top: 2rem;
 
     h2 {
         background-repeat: repeat;
@@ -1125,7 +1196,8 @@ div > li {
             }
 
             &.letmeask {
-                box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+                    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 
                 &:before {
                     width: 0;
@@ -1152,8 +1224,8 @@ div > li {
 
             &.senai {
                 // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, #75709e 0px -2px 6px 0px inset;
-                box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
-
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+                    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 
                 > div h4 {
                     display: none;
@@ -1169,7 +1241,7 @@ div > li {
                     > div {
                         h4 {
                             display: block;
-                            color:#fff;
+                            color: #fff;
                             text-align: right;
                         }
                     }
@@ -1182,7 +1254,8 @@ div > li {
 
             &.spring {
                 // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, #3f3d56 0px -2px 6px 0px inset;
-                box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+                    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
                 > div h4 {
                     display: none;
                 }
@@ -1295,7 +1368,7 @@ a {
     max-width: 500px;
 
     span {
-        color:#e1e1e6;
+        color: #e1e1e6;
         font-size: 25px;
         font-weight: 600;
     }
@@ -1314,7 +1387,7 @@ a {
     flex-wrap: wrap;
     text-align: center;
 
-    >div {
+    > div {
         margin-top: 2rem;
     }
 
@@ -1368,14 +1441,14 @@ a {
 }
 
 .form {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 
     span {
-        color:#e1e1e6;
+        color: #e1e1e6;
         font-size: 25px;
-        padding-top: .35rem;
+        padding-top: 0.35rem;
         font-weight: 600;
     }
 
@@ -1431,11 +1504,11 @@ footer {
         font-size: 1.2rem;
         color: #888888;
 
-        &:last-child{
+        &:last-child {
             color: #fff;
         }
 
-        a{
+        a {
             color: #f5f5f5;
             text-decoration: underline;
         }
@@ -1558,6 +1631,10 @@ footer {
         p {
             font-size: 1.3rem;
         }
+    }
+
+    nav {
+        display: none;
     }
 }
 
