@@ -448,6 +448,7 @@ section {
 }
 
 .maincontent-felipe img {
+  height: 300px;
   border-radius: 50%;
   border: double 10px transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#282848), to(#3f3d56)), -webkit-gradient(linear, left top, right top, from(#282848), to(#3f3d56));
