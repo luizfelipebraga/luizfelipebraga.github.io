@@ -48,15 +48,15 @@ img {
 }
 
 .scroll-down {
-	nav {
-		transform: translate3d(0, -100%, 0);
-	}
+    nav {
+        transform: translate3d(0, -100%, 0);
+    }
 }
 
 .scroll-up {
-	nav {
-		filter: drop-shadow(0 -10px 20px rgb(170, 170, 170));
-	}
+    nav {
+        filter: drop-shadow(0 -10px 20px rgb(0, 0, 0));
+    }
 }
 
 nav {
@@ -73,9 +73,9 @@ nav {
 
     &.sticky {
         align-items: center;
-        padding: 1.5rem 9rem;
-        background: #75709e;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        padding: 1.8rem 9rem;
+        background: rgb(43,42,74);
+        background: linear-gradient(90deg, rgba(43,42,74,1) 0%, rgba(43,42,74,1) 6%, rgba(117,112,158,1) 100%);
 
         ul li a {
             color: rgb(255, 255, 255);
@@ -88,7 +88,8 @@ nav {
 
     span {
         color: #fff;
-        transition: all 0.2s ease-in-out; 
+        text-transform: uppercase;
+        transition: all 0.2s ease-in-out;
     }
 
     ul {
@@ -107,7 +108,7 @@ nav {
                 transition: filter 0.2s ease;
 
                 &:hover {
-                    filter: brightness(.8) ;
+                    filter: brightness(0.8);
                 }
             }
         }
@@ -1163,17 +1164,38 @@ div > li {
                 h3 {
                     font-size: 2.6rem;
                     color: #f3f3f3;
+                    background-repeat: repeat;
+                    font-weight: 700;
+                    background-size: 100%;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -moz-background-clip: text;
+                    -moz-text-fill-color: transparent;
+                    text-align: center;
+
+                    &.letmeask {
+                        background-image: linear-gradient(91.18deg, #fff 32.63%, #75709e 62.22%);
+                    }
+
+                    &.senai {
+                        background-image: linear-gradient(91.18deg, #fff 32.63%, #9e7070 62.22%);
+                    }
+
+                    &.bank {
+                        background-image: linear-gradient(91.18deg, #fff 32.63%, #709e72 62.22%);
+                    }
                 }
 
                 p {
                     font-size: 1.2rem;
-                    line-height: 28px;
+                    line-height: 30px;
                     margin-top: 20px;
                     margin-bottom: 10px;
                     color: #9b9b9b;
 
                     strong {
-                        color: rgb(221, 221, 221);
+                        color: rgb(197, 196, 196);
                     }
                 }
 
@@ -1186,12 +1208,6 @@ div > li {
             }
 
             &:hover {
-                // img,
-                // svg,
-                // h3,
-                // p {
-                //     opacity: 0.4;
-                // }
                 transform: scale(1.1);
             }
 
