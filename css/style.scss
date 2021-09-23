@@ -1103,7 +1103,7 @@ div > li {
 
     .project-items {
         height: 100%;
-        max-width: 1050px;
+        max-width: 1100px;
         align-items: center;
 
         .date {
@@ -1111,7 +1111,14 @@ div > li {
         }
 
         .box-project {
-            align-items: center;
+
+            &.letmeask, &.bank {
+                margin-right: 50px;
+            }
+
+            &.senai {
+                margin-left: 45px;
+            }
         }
 
         .project-content {

@@ -1040,14 +1040,17 @@ div > li {
 }
 .project-maincontent .project-items {
   height: 100%;
-  max-width: 1050px;
+  max-width: 1100px;
   align-items: center;
 }
 .project-maincontent .project-items .date {
   color: #fff;
 }
-.project-maincontent .project-items .box-project {
-  align-items: center;
+.project-maincontent .project-items .box-project.letmeask, .project-maincontent .project-items .box-project.bank {
+  margin-right: 50px;
+}
+.project-maincontent .project-items .box-project.senai {
+  margin-left: 45px;
 }
 .project-maincontent .project-items .project-content {
   color: #fff;
