@@ -64,7 +64,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    transition: 0.5s;
+    transition: all 0.5s ease-in-out;
 
     position: fixed;
     z-index: 5;
@@ -76,6 +76,10 @@ nav {
         padding: 1.8rem 9rem;
         background: rgb(43,42,74);
         background: linear-gradient(90deg, rgba(43,42,74,1) 0%, rgba(43,42,74,1) 6%, rgba(117,112,158,1) 100%);
+
+        ul {
+            gap: 5rem;
+        }
 
         ul li a {
             color: rgb(255, 255, 255);
@@ -93,9 +97,9 @@ nav {
     }
 
     ul {
-        position: relative;
         display: flex;
         gap: 3rem;
+        transition: all 0.5s ease-in-out;
 
         li {
             text-decoration: none;
@@ -1108,6 +1112,10 @@ div > li {
 
         .date {
             color: #fff;
+
+            &.senai {
+                text-align: right;
+            }
         }
 
         .box-project {
