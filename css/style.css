@@ -1915,7 +1915,9 @@ footer span a {
   .containerInfos span {
     font-size: 1.1rem;
   }
-  #introduction,
+  #introduction {
+    padding: 19px;
+  }
   #skills {
     padding: 100px;
   }
@@ -1953,6 +1955,9 @@ footer span a {
     width: 100%;
     height: 85vh;
   }
+  .containerIntroduction {
+    padding: 10rem 0 20rem 0;
+  }
   .box_cvbutton {
     width: 100%;
     display: -webkit-box;
@@ -1981,23 +1986,16 @@ footer span a {
     background: #121214;
   }
   .containerIntroduction .name-box > span {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
   .containerIntroduction .logo b span {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .main-content-formacao > img {
     display: none;
   }
   #items-wrapper {
     width: 85vw;
-  }
-  .box_cvbutton {
-    top: 20%;
-    gap: 0.5rem;
-  }
-  .box_cvbutton .btn {
-    font-size: 1rem;
   }
   .subtitle {
     text-align: center;
@@ -2040,9 +2038,18 @@ footer span a {
   html {
     font-size: 78.75%;
   }
-  .container .containerIntroduction,
   .container-skills {
     padding: 10px;
+  }
+  .box_cvbutton {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2rem;
   }
   .projects {
     padding: 20px;
