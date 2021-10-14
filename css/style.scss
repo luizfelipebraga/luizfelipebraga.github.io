@@ -47,12 +47,14 @@ img {
     width: 100%;
 }
 
+//when scroll down desappear nav
 .scroll-down {
     nav {
         transform: translate3d(0, -100%, 0);
     }
 }
 
+//when scroll up appear nav
 .scroll-up {
     nav {
         filter: drop-shadow(0 -10px 20px rgb(0, 0, 0));
@@ -74,8 +76,8 @@ nav {
     &.sticky {
         align-items: center;
         padding: 1.8rem 9rem;
-        background: rgb(43,42,74);
-        background: linear-gradient(90deg, rgba(43,42,74,1) 0%, rgba(43,42,74,1) 6%, rgba(117,112,158,1) 100%);
+        background: rgb(43, 42, 74);
+        background: linear-gradient(90deg, rgba(43, 42, 74, 1) 0%, rgba(43, 42, 74, 1) 6%, rgba(117, 112, 158, 1) 100%);
 
         ul {
             gap: 5rem;
@@ -127,7 +129,6 @@ section {
     width: 100%;
     overflow: hidden;
 }
-//fim do container
 
 //sections
 #introduction {
@@ -156,7 +157,7 @@ section {
     min-height: 75vh;
     width: 100%;
 
-    padding: 100px 150px;
+    padding: 60px 150px;
     > h1 {
         color: #fff;
     }
@@ -164,7 +165,7 @@ section {
 
 #felipe {
     width: 100%;
-    padding: 120px 150px 20px 150px;
+    padding: 80px 150px 20px 150px;
     flex-direction: column;
     justify-content: space-between;
     background: #121214;
@@ -238,7 +239,6 @@ section {
 //fim curved
 
 /* SVG background image via https://haikei.app/ */
-
 .spacer {
     aspect-ratio: 400/50;
     width: 100%;
@@ -364,33 +364,6 @@ section {
     animation: scrolldown 1.2s ease-in-out infinite;
 }
 
-.BoxScroll {
-    position: relative;
-    top: 35%;
-    .div1,
-    .div2 {
-        left: 50%;
-        transform: translateY(0%) rotate(45deg);
-        opacity: 0;
-    }
-}
-
-@keyframes scrolldown {
-    0% {
-        transform: translateY(20%) rotate(45deg);
-        opacity: 0.7;
-    }
-    50% {
-        transform: translateY(0%) rotate(45deg);
-        opacity: 0.2;
-    }
-    100% {
-        transform: translateY(20%) rotate(45deg);
-        opacity: 0.7;
-    }
-}
-/* Animation */
-
 .logo {
     text-align: center;
     width: 100%;
@@ -400,13 +373,10 @@ section {
     font: 600 1.3rem "Inter", sans-serif;
     color: #fee;
     text-shadow: 0 2px 90px, 0 0 2px, 0 0 100px #3f3d56, 0 0 0.5em #ffffff, 0 0 0.1em #ffffff, 0 3px 2px #000;
-}
-.logo b span {
-    font-size: 3.5rem;
-    animation: blink linear infinite 2s;
-}
-.logo b span:nth-of-type(2) {
-    animation: blink linear infinite 3s;
+
+    span {
+        font-size: 3.5rem;
+    }
 }
 
 .maincontent-felipe {
@@ -1119,8 +1089,8 @@ div > li {
         }
 
         .box-project {
-
-            &.letmeask, &.bank {
+            &.letmeask,
+            &.bank {
                 margin-right: 50px;
             }
 
@@ -1633,7 +1603,7 @@ footer {
     #introduction {
         padding: 19px;
     }
-  
+
     #skills {
         padding: 100px;
     }
