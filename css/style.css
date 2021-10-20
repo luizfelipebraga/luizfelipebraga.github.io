@@ -307,9 +307,13 @@ section {
 
 .containerIntroduction > img {
   height: 14rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .containerIntroduction > img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   -webkit-filter: none;
           filter: none;
 }
@@ -409,6 +413,10 @@ section {
 .name-box > span {
   color: #fff;
   font-size: 3rem;
+  letter-spacing: 0.2rem;
+}
+
+.name-box > span:first-child {
   letter-spacing: 0.5rem;
 }
 
@@ -443,16 +451,12 @@ section {
 .logo {
   text-align: center;
   width: 100%;
-}
-
-.logo b {
-  font: 600 1.3rem "Inter", sans-serif;
+  font: bold 1.3rem "Inter", sans-serif;
   color: #fee;
-  text-shadow: 0 2px 90px, 0 0 2px, 0 0 100px #3f3d56, 0 0 0.5em #ffffff, 0 0 0.1em #ffffff, 0 3px 2px #000;
 }
 
-.logo b span {
-  font-size: 3.5rem;
+.logo span {
+  font-size: 4.5rem;
 }
 
 .maincontent-felipe {
